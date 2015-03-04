@@ -23,49 +23,6 @@
             </objects>
             <point key="canvasLocation" x="380" y="378"/>
         </scene>
-        <!--Top View Controller-->
-        <scene sceneID="PwF-je-nlj">
-            <objects>
-                <viewController id="YEC-HJ-dfp" customClass="topViewController" customModule="takikenApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="QRk-BQ-6Eq"/>
-                        <viewControllerLayoutGuide type="bottom" id="Lbj-0K-MI5"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="p3v-Uw-d8Z">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KUH-wz-Bt1">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="ホーム" id="M5x-dx-mOQ">
-                                        <barButtonItem key="leftBarButtonItem" title="menu" id="2Cj-aM-fDB">
-                                            <connections>
-                                                <action selector="menuShowOnTap:" destination="YEC-HJ-dfp" id="6cD-Ze-7SX"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="KUH-wz-Bt1" secondAttribute="trailing" constant="-16" id="N3F-Ra-rcG"/>
-                            <constraint firstItem="KUH-wz-Bt1" firstAttribute="leading" secondItem="p3v-Uw-d8Z" secondAttribute="leadingMargin" constant="-16" id="eKV-kb-QPT"/>
-                            <constraint firstItem="KUH-wz-Bt1" firstAttribute="top" secondItem="p3v-Uw-d8Z" secondAttribute="topMargin" constant="20" id="uIS-lT-QPl"/>
-                            <constraint firstItem="KUH-wz-Bt1" firstAttribute="top" secondItem="p3v-Uw-d8Z" secondAttribute="top" id="yvX-kG-vRL"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="yvX-kG-vRL"/>
-                            </mask>
-                        </variation>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="r1r-FE-4RG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1162" y="408"/>
-        </scene>
         <!--ランキング-->
         <scene sceneID="NVL-Nu-IvM">
             <objects>
@@ -344,6 +301,73 @@
             </objects>
             <point key="canvasLocation" x="1838" y="2568"/>
         </scene>
+        <!--問題作成-->
+        <scene sceneID="z3s-f2-6BW">
+            <objects>
+                <viewController id="oPk-l8-Bq6" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kci-p6-hsZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="igQ-ma-FxQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ji8-Ic-5hH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="問題作成" image="drop.png" id="HEe-4L-slJ" customClass="RAMAnimatedTabBarItem" customModule="takikenApp" customModuleProvider="target">
+                        <connections>
+                            <outlet property="animation" destination="bFv-NM-Pxg" id="hO8-De-H9u"/>
+                        </connections>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ayx-2d-qiv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="bFv-NM-Pxg" customClass="RAMBounceAnimation" customModule="takikenApp" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="2658" y="3601"/>
+        </scene>
+        <!--既存問題-->
+        <scene sceneID="Dqm-0i-1jT">
+            <objects>
+                <viewController id="Yt0-LY-cnA" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jpu-PI-6n3"/>
+                        <viewControllerLayoutGuide type="bottom" id="eyt-r1-4Pz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FTF-zm-UFD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="既存問題" image="user_00084.png" id="aec-91-ogc" customClass="RAMAnimatedTabBarItem" customModule="takikenApp" customModuleProvider="target">
+                        <connections>
+                            <outlet property="animation" destination="FFs-lV-clO" id="gsn-vC-G1v"/>
+                        </connections>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lTn-ag-uAH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="FFs-lV-clO" customClass="RAMFlipBottomTransitionItemAniamtions" customModule="takikenApp" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="2658" y="2939"/>
+        </scene>
+        <!--Animated Tab Bar Controller-->
+        <scene sceneID="2IZ-PA-iwU">
+            <objects>
+                <tabBarController id="Nb0-v3-y3V" customClass="RAMAnimatedTabBarController" customModule="takikenApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="GX6-1j-x8E">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Yt0-LY-cnA" kind="relationship" relationship="viewControllers" id="ayG-8I-W0N"/>
+                        <segue destination="oPk-l8-Bq6" kind="relationship" relationship="viewControllers" id="gLT-8N-3t0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X1Y-HD-ZuL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1838" y="3271"/>
+        </scene>
         <!--1問1答問題-->
         <scene sceneID="ro6-tp-CZK">
             <objects>
@@ -425,10 +449,10 @@
             </objects>
             <point key="canvasLocation" x="380" y="1844"/>
         </scene>
-        <!--Map Top View Controller-->
+        <!--たきざわMAP-->
         <scene sceneID="969-FV-SeZ">
             <objects>
-                <viewController storyboardIdentifier="mapTop" id="mc0-wY-nWm" customClass="mapTopViewController" customModule="takikenApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mc0-wY-nWm" customClass="mapTopViewController" customModule="takikenApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cdV-Bn-xPE"/>
                         <viewControllerLayoutGuide type="bottom" id="KOp-WP-LEv"/>
@@ -436,31 +460,22 @@
                     <view key="view" contentMode="scaleToFill" id="Dd9-LY-THX">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="loQ-sZ-dKX">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="たきざわMAP" id="tbs-9M-KpO">
-                                        <barButtonItem key="leftBarButtonItem" title="menu" id="Uof-16-4dh">
-                                            <connections>
-                                                <action selector="menuShowOnTap:" destination="mc0-wY-nWm" id="mhC-X0-WkC"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="loQ-sZ-dKX" firstAttribute="top" secondItem="Dd9-LY-THX" secondAttribute="topMargin" constant="20" id="CgO-eK-Gn7"/>
-                            <constraint firstItem="loQ-sZ-dKX" firstAttribute="leading" secondItem="Dd9-LY-THX" secondAttribute="leadingMargin" constant="-16" id="Lh9-T8-s5d"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="loQ-sZ-dKX" secondAttribute="trailing" constant="-16" id="gFa-FP-dge"/>
-                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="たきざわMAP" id="0aM-gd-AbC">
+                        <barButtonItem key="leftBarButtonItem" title="menu" id="ytz-P7-P9h">
+                            <connections>
+                                <action selector="menuShowOnTap:" destination="mc0-wY-nWm" id="Elt-ja-eWO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="Nb0-v3-y3V" kind="show" identifier="spotInfo" id="Bbq-Q1-3Ah"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fV7-QN-OJu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="380" y="3252"/>
+            <point key="canvasLocation" x="1128" y="3271"/>
         </scene>
         <!--Menu Table View Controller-->
         <scene sceneID="THF-Ml-ooK">
@@ -488,6 +503,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0jw-F0-hf0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-314" y="1056"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fYe-se-3tr">
+            <objects>
+                <navigationController storyboardIdentifier="mapTop" automaticallyAdjustsScrollViewInsets="NO" id="yGm-u6-2Ad" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eS4-5g-HeJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mc0-wY-nWm" kind="relationship" relationship="rootViewController" id="ETD-nj-FRl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e6o-Hv-MDO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="3270"/>
         </scene>
     </scenes>
     <resources>

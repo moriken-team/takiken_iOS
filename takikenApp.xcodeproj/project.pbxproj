@@ -64,7 +64,6 @@
 		872AC4441AA6D8560052393C /* AVFoundation.framework in Resources */ = {isa = PBXBuildFile; fileRef = 872AC4111AA622180052393C /* AVFoundation.framework */; };
 		872AC4451AA6D8560052393C /* CoreData.framework in Resources */ = {isa = PBXBuildFile; fileRef = 872AC40F1AA621B70052393C /* CoreData.framework */; };
 		872AC4461AA6D8560052393C /* CoreLocation.framework in Resources */ = {isa = PBXBuildFile; fileRef = 872AC40D1AA605600052393C /* CoreLocation.framework */; };
-		87F61FF11A8F3C7700607F94 /* topViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F61FF01A8F3C7700607F94 /* topViewController.swift */; };
 		87F61FF41A8F3D2700607F94 /* menuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F61FF31A8F3D2700607F94 /* menuTableViewController.swift */; };
 		87FB72DD1AA324CD007A461D /* mapTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FB72DC1AA324CD007A461D /* mapTopViewController.swift */; };
 /* End PBXBuildFile section */
@@ -130,7 +129,6 @@
 		872AC4351AA6D5DF0052393C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		872AC4381AA6D7930052393C /* libcurses.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurses.dylib; path = usr/lib/libcurses.dylib; sourceTree = SDKROOT; };
 		876860851A8F41C6001DF304 /* takikenApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "takikenApp-Bridging-Header.h"; sourceTree = "<group>"; };
-		87F61FF01A8F3C7700607F94 /* topViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = topViewController.swift; sourceTree = "<group>"; };
 		87F61FF31A8F3D2700607F94 /* menuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuTableViewController.swift; sourceTree = "<group>"; };
 		87FB72DC1AA324CD007A461D /* mapTopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapTopViewController.swift; sourceTree = "<group>"; };
 		CFA30EA8CF2E3F715859525C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -235,7 +233,6 @@
 				8720812E1A8F2FDD0081EE80 /* LaunchScreen.xib */,
 				872081231A8F2FDD0081EE80 /* Supporting Files */,
 				876860851A8F41C6001DF304 /* takikenApp-Bridging-Header.h */,
-				87F61FF01A8F3C7700607F94 /* topViewController.swift */,
 				87F61FF31A8F3D2700607F94 /* menuTableViewController.swift */,
 				872AC3FB1AA5C6000052393C /* profileViewController.swift */,
 				872AC3FD1AA5CC650052393C /* rankingViewController.swift */,
@@ -497,7 +494,6 @@
 				872AC3EF1AA388A50052393C /* RAMFrameItemAnimation.swift in Sources */,
 				872081281A8F2FDD0081EE80 /* ViewController.swift in Sources */,
 				872AC3F01AA388A50052393C /* RAMFumeAnimation.swift in Sources */,
-				87F61FF11A8F3C7700607F94 /* topViewController.swift in Sources */,
 				872AC3F21AA388A50052393C /* RAMTransitionItemAnimation.swift in Sources */,
 				872AC4081AA5DF280052393C /* hundredQuestionAnswerViewController.swift in Sources */,
 				872AC4021AA5CE670052393C /* userSnsManagerViewController.swift in Sources */,
