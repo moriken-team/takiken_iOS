@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sliding View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ECSlidingViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -20,6 +21,478 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="380" y="378"/>
+        </scene>
+        <!--Top View Controller-->
+        <scene sceneID="PwF-je-nlj">
+            <objects>
+                <viewController id="YEC-HJ-dfp" customClass="topViewController" customModule="takikenApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QRk-BQ-6Eq"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lbj-0K-MI5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p3v-Uw-d8Z">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KUH-wz-Bt1">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="ホーム" id="M5x-dx-mOQ">
+                                        <barButtonItem key="leftBarButtonItem" title="menu" id="2Cj-aM-fDB">
+                                            <connections>
+                                                <action selector="menuShowOnTap:" destination="YEC-HJ-dfp" id="6cD-Ze-7SX"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="KUH-wz-Bt1" secondAttribute="trailing" constant="-16" id="N3F-Ra-rcG"/>
+                            <constraint firstItem="KUH-wz-Bt1" firstAttribute="leading" secondItem="p3v-Uw-d8Z" secondAttribute="leadingMargin" constant="-16" id="eKV-kb-QPT"/>
+                            <constraint firstItem="KUH-wz-Bt1" firstAttribute="top" secondItem="p3v-Uw-d8Z" secondAttribute="topMargin" constant="20" id="uIS-lT-QPl"/>
+                            <constraint firstItem="KUH-wz-Bt1" firstAttribute="top" secondItem="p3v-Uw-d8Z" secondAttribute="top" id="yvX-kG-vRL"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="yvX-kG-vRL"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r1r-FE-4RG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1162" y="408"/>
+        </scene>
+        <!--ランキング-->
+        <scene sceneID="NVL-Nu-IvM">
+            <objects>
+                <viewController id="p3F-QT-x6r" customClass="rankingViewController" customModule="takikenApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RPQ-fQ-7zw"/>
+                        <viewControllerLayoutGuide type="bottom" id="xkL-kH-JN6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BIW-J7-Jf3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U7y-v8-Ac2">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="ホーム" id="6PF-cD-sir">
+                                        <barButtonItem key="leftBarButtonItem" title="menu" id="TOD-C1-lLX">
+                                            <connections>
+                                                <action selector="menuShowOnTap:" destination="p3F-QT-x6r" id="Bt5-TB-7zS"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="U7y-v8-Ac2" secondAttribute="trailing" constant="-16" id="5qe-SK-Jrx"/>
+                            <constraint firstItem="U7y-v8-Ac2" firstAttribute="top" secondItem="BIW-J7-Jf3" secondAttribute="topMargin" constant="20" id="AM5-2Z-rFC"/>
+                            <constraint firstItem="U7y-v8-Ac2" firstAttribute="leading" secondItem="BIW-J7-Jf3" secondAttribute="leadingMargin" constant="-16" id="gR5-9C-GBF"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="ランキング" image="user_00084.png" id="Mbt-XM-gjH" customClass="RAMAnimatedTabBarItem" customModule="takikenApp" customModuleProvider="target">
+                        <connections>
+                            <outlet property="animation" destination="XbT-WK-Caf" id="ito-Zv-Dkb"/>
+                        </connections>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZH-St-GPj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="XbT-WK-Caf" customClass="RAMRotationAnimation" customModule="takikenApp" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="1838" y="1090"/>
+        </scene>
+        <!--プロフィール-->
+        <scene sceneID="QAD-Ja-RjU">
+            <objects>
+                <viewController id="iRa-up-vGt" customClass="profileViewController" customModule="takikenApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1h7-V1-BMn"/>
+                        <viewControllerLayoutGuide type="bottom" id="mGL-t0-2cx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G6j-Pz-9Hp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lzN-7z-ppg">
+                                <rect key="frame" x="0.0" y="20" width="598" height="44"/>
+                                <items>
+                                    <navigationItem title="ホーム" id="MdM-mr-BVK">
+                                        <barButtonItem key="leftBarButtonItem" title="menu" id="7jX-Ep-Ff2">
+                                            <connections>
+                                                <action selector="menuShowOnTap:" destination="iRa-up-vGt" id="1W5-sU-kdm"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="lzN-7z-ppg" secondAttribute="trailing" constant="-14" id="2aQ-jj-HgO"/>
+                            <constraint firstItem="lzN-7z-ppg" firstAttribute="top" secondItem="G6j-Pz-9Hp" secondAttribute="topMargin" constant="20" id="gLK-vf-8nT"/>
+                            <constraint firstItem="lzN-7z-ppg" firstAttribute="leading" secondItem="G6j-Pz-9Hp" secondAttribute="leadingMargin" constant="-16" id="rR0-ra-pt0"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="プロフィール" image="drop.png" id="Wdw-wf-GLC" customClass="RAMAnimatedTabBarItem" customModule="takikenApp" customModuleProvider="target">
+                        <connections>
+                            <outlet property="animation" destination="5wM-pw-7l3" id="sgf-fw-EJu"/>
+                        </connections>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="py8-l0-4pY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="5wM-pw-7l3" customClass="RAMFumeAnimation" customModule="takikenApp" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="1162" y="1090"/>
+        </scene>
+        <!--SNS連携-->
+        <scene sceneID="Pbz-sv-4h0">
+            <objects>
+                <viewController id="lyf-w0-Dpu" customClass="userSnsManagerViewController" customModule="takikenApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GEL-I1-H9f"/>
+                        <viewControllerLayoutGuide type="bottom" id="swb-YU-GPC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lZs-Bm-8sW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eMC-ik-hOc">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="ホーム" id="pmE-6d-FsK">
+                                        <barButtonItem key="leftBarButtonItem" title="menu" id="uW6-da-G4A">
+                                            <connections>
+                                                <action selector="menuShowOnTap:" destination="lyf-w0-Dpu" id="ZF2-6m-IgH"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eMC-ik-hOc" firstAttribute="leading" secondItem="lZs-Bm-8sW" secondAttribute="leadingMargin" constant="-16" id="HU4-g5-cEQ"/>
+                            <constraint firstItem="eMC-ik-hOc" firstAttribute="top" secondItem="lZs-Bm-8sW" secondAttribute="topMargin" constant="20" id="QNN-vE-OCI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eMC-ik-hOc" secondAttribute="trailing" constant="-16" id="SEA-dH-vG6"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="SNS連携" image="icon_pin_00160.png" id="QmY-4b-EIL" customClass="RAMAnimatedTabBarItem" customModule="takikenApp" customModuleProvider="target">
+                        <connections>
+                            <outlet property="animation" destination="OyM-w6-h9D" id="gOW-NP-C8B"/>
+                        </connections>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qAX-if-5Xn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="OyM-w6-h9D" customClass="RAMFlipBottomTransitionItemAniamtions" customModule="takikenApp" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="2526" y="1090"/>
+        </scene>
+        <!--Animated Tab Bar Controller-->
+        <scene sceneID="rGb-pI-STP">
+            <objects>
+                <tabBarController storyboardIdentifier="Top" id="ZB3-FO-bis" customClass="RAMAnimatedTabBarController" customModule="takikenApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="c1p-kF-ut2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="iRa-up-vGt" kind="relationship" relationship="viewControllers" id="7VE-iz-ytv"/>
+                        <segue destination="p3F-QT-x6r" kind="relationship" relationship="viewControllers" id="Wbx-6e-VqP"/>
+                        <segue destination="lyf-w0-Dpu" kind="relationship" relationship="viewControllers" id="fEd-HP-pJT"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mMo-rF-HOy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="1078"/>
+        </scene>
+        <!--試験モード-->
+        <scene sceneID="Qxt-2F-ZbH">
+            <objects>
+                <viewController id="0MK-5E-C5e" customClass="hundredQuestionAnswerViewController" customModule="takikenApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e95-DO-kSW"/>
+                        <viewControllerLayoutGuide type="bottom" id="wGK-pv-mTX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LUb-VP-0Al">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="630-AP-va5">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="問題解答" id="lal-b9-XYv">
+                                        <barButtonItem key="leftBarButtonItem" title="menu" id="qs1-ea-Xfp">
+                                            <connections>
+                                                <action selector="menuShowOnTap:" destination="0MK-5E-C5e" id="y6o-cV-KQa"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="630-AP-va5" firstAttribute="top" secondItem="LUb-VP-0Al" secondAttribute="topMargin" constant="20" id="J7l-4n-ibZ"/>
+                            <constraint firstItem="630-AP-va5" firstAttribute="leading" secondItem="LUb-VP-0Al" secondAttribute="leadingMargin" constant="-16" id="fBV-1p-wpr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="630-AP-va5" secondAttribute="trailing" constant="-16" id="ilI-RM-dIQ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="試験モード" image="icon_pin_00160.png" id="9ZS-AZ-0cf" customClass="RAMAnimatedTabBarItem" customModule="takikenApp" customModuleProvider="target">
+                        <connections>
+                            <outlet property="animation" destination="T1N-vp-C4N" id="TBj-03-Y28"/>
+                        </connections>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1CB-PJ-S6d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="T1N-vp-C4N" customClass="RAMFlipTopTransitionItemAniamtions" customModule="takikenApp" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="1838" y="1844"/>
+        </scene>
+        <!--練習モード-->
+        <scene sceneID="Y2x-J0-Yoj">
+            <objects>
+                <viewController id="XGN-uS-RdM" customClass="oneQuestionAnswerViewController" customModule="takikenApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7uM-jl-aUP"/>
+                        <viewControllerLayoutGuide type="bottom" id="pec-14-heZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sU1-eU-Ogd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E4u-nr-Z3y">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="問題解答" id="OqF-xm-TDo">
+                                        <barButtonItem key="leftBarButtonItem" title="menu" id="ESU-rw-Rre">
+                                            <connections>
+                                                <action selector="menuShowOnTap:" destination="XGN-uS-RdM" id="eai-c0-wtJ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="E4u-nr-Z3y" firstAttribute="top" secondItem="sU1-eU-Ogd" secondAttribute="topMargin" constant="20" id="PCN-Wn-nag"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="E4u-nr-Z3y" secondAttribute="trailing" constant="-16" id="rgq-2i-5b7"/>
+                            <constraint firstItem="E4u-nr-Z3y" firstAttribute="leading" secondItem="sU1-eU-Ogd" secondAttribute="leadingMargin" constant="-16" id="tMu-Yk-aoK"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="練習モード" image="drop.png" id="RAf-Wa-Zjs" customClass="RAMAnimatedTabBarItem" customModule="takikenApp" customModuleProvider="target">
+                        <connections>
+                            <outlet property="animation" destination="56x-iw-jIJ" id="VV0-jD-nYp"/>
+                        </connections>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RI0-M7-JXi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="56x-iw-jIJ" customClass="RAMFlipBottomTransitionItemAniamtions" customModule="takikenApp" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="1162" y="1844"/>
+        </scene>
+        <!--選択問題-->
+        <scene sceneID="lNQ-VI-gcp">
+            <objects>
+                <viewController id="63W-mz-KaQ" customClass="selectionProblemCreateViewController" customModule="takikenApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rat-cj-ab1"/>
+                        <viewControllerLayoutGuide type="bottom" id="mhA-Ga-ryk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="r66-UU-KLs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mdo-Mb-cct">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="問題解答" id="sbT-Iz-VyE">
+                                        <barButtonItem key="leftBarButtonItem" title="menu" id="S7z-hL-Hxl">
+                                            <connections>
+                                                <action selector="menuShowOnTap:" destination="63W-mz-KaQ" id="qCq-r7-SiD"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Mdo-Mb-cct" firstAttribute="leading" secondItem="r66-UU-KLs" secondAttribute="leadingMargin" constant="-16" id="E9g-lZ-yM4"/>
+                            <constraint firstItem="Mdo-Mb-cct" firstAttribute="top" secondItem="r66-UU-KLs" secondAttribute="topMargin" constant="20" id="iLR-Ah-16o"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mdo-Mb-cct" secondAttribute="trailing" constant="-16" id="xiz-L7-hQn"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="選択問題" image="icon_pin_00160.png" id="Ehk-wQ-kVO" customClass="RAMAnimatedTabBarItem" customModule="takikenApp" customModuleProvider="target">
+                        <connections>
+                            <outlet property="animation" destination="yMi-4S-nVU" id="oRE-mq-iSy"/>
+                        </connections>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RDq-v4-wSg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="yMi-4S-nVU" customClass="RAMFlipLeftTransitionItemAniamtions" customModule="takikenApp" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="1838" y="2568"/>
+        </scene>
+        <!--1問1答問題-->
+        <scene sceneID="ro6-tp-CZK">
+            <objects>
+                <viewController id="Wtd-K0-Its" customClass="questionsAndAnswersCreateViewController" customModule="takikenApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FX1-sb-l2b"/>
+                        <viewControllerLayoutGuide type="bottom" id="3xi-qt-0yS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3z6-qU-Trq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j0T-8o-zam">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="問題解答" id="gWV-0V-F80">
+                                        <barButtonItem key="leftBarButtonItem" title="menu" id="Oyl-4d-Tix">
+                                            <connections>
+                                                <action selector="menuShowOnTap:" destination="Wtd-K0-Its" id="16c-Xd-mIf"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="j0T-8o-zam" firstAttribute="top" secondItem="3z6-qU-Trq" secondAttribute="topMargin" constant="20" id="CG2-Ea-lws"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="j0T-8o-zam" secondAttribute="trailing" constant="-16" id="ViM-fJ-WIS"/>
+                            <constraint firstItem="j0T-8o-zam" firstAttribute="leading" secondItem="3z6-qU-Trq" secondAttribute="leadingMargin" constant="-16" id="xdk-6u-0yO"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="1問1答問題" image="user_00084.png" id="wch-GV-1LY" customClass="RAMAnimatedTabBarItem" customModule="takikenApp" customModuleProvider="target">
+                        <connections>
+                            <outlet property="animation" destination="46B-To-VfA" id="3Vm-8L-uWQ"/>
+                        </connections>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WwA-2q-d0c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="46B-To-VfA" customClass="RAMBounceAnimation" customModule="takikenApp" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="1162" y="2568"/>
+        </scene>
+        <!--Animated Tab Bar Controller-->
+        <scene sceneID="OyE-tE-3CU">
+            <objects>
+                <tabBarController storyboardIdentifier="createTop" id="CMv-JS-GY8" customClass="RAMAnimatedTabBarController" customModule="takikenApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Lrl-jH-1rp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Wtd-K0-Its" kind="relationship" relationship="viewControllers" id="bAA-2q-Ze2"/>
+                        <segue destination="63W-mz-KaQ" kind="relationship" relationship="viewControllers" id="Hbr-th-MW9"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="meg-FV-uRD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="2569"/>
+        </scene>
+        <!--Animated Tab Bar Controller-->
+        <scene sceneID="YFj-MW-QtN">
+            <objects>
+                <tabBarController storyboardIdentifier="answerTop" id="Ish-ys-jUk" customClass="RAMAnimatedTabBarController" customModule="takikenApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="PHt-to-IKA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="XGN-uS-RdM" kind="relationship" relationship="viewControllers" id="nEd-37-4TA"/>
+                        <segue destination="0MK-5E-C5e" kind="relationship" relationship="viewControllers" id="0dK-0F-tdr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DVD-Wv-TNw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="1844"/>
+        </scene>
+        <!--Map Top View Controller-->
+        <scene sceneID="969-FV-SeZ">
+            <objects>
+                <viewController storyboardIdentifier="mapTop" id="mc0-wY-nWm" customClass="mapTopViewController" customModule="takikenApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cdV-Bn-xPE"/>
+                        <viewControllerLayoutGuide type="bottom" id="KOp-WP-LEv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dd9-LY-THX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="loQ-sZ-dKX">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="たきざわMAP" id="tbs-9M-KpO">
+                                        <barButtonItem key="leftBarButtonItem" title="menu" id="Uof-16-4dh">
+                                            <connections>
+                                                <action selector="menuShowOnTap:" destination="mc0-wY-nWm" id="mhC-X0-WkC"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="loQ-sZ-dKX" firstAttribute="top" secondItem="Dd9-LY-THX" secondAttribute="topMargin" constant="20" id="CgO-eK-Gn7"/>
+                            <constraint firstItem="loQ-sZ-dKX" firstAttribute="leading" secondItem="Dd9-LY-THX" secondAttribute="leadingMargin" constant="-16" id="Lh9-T8-s5d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="loQ-sZ-dKX" secondAttribute="trailing" constant="-16" id="gFa-FP-dge"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fV7-QN-OJu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="3252"/>
+        </scene>
+        <!--Menu Table View Controller-->
+        <scene sceneID="THF-Ml-ooK">
+            <objects>
+                <tableViewController storyboardIdentifier="Menu" id="Wi1-vQ-AS9" customClass="menuTableViewController" customModule="takikenApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2bc-Gr-K7K">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="44" id="u04-gA-rjO">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u04-gA-rjO" id="QIN-ua-cpE">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Wi1-vQ-AS9" id="K7q-8d-u3G"/>
+                            <outlet property="delegate" destination="Wi1-vQ-AS9" id="R5k-VZ-psd"/>
+                        </connections>
+                    </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0jw-F0-hf0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-314" y="1056"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="drop.png" width="24" height="24"/>
+        <image name="icon_pin_00160.png" width="30" height="30"/>
+        <image name="user_00084.png" width="30" height="30"/>
+    </resources>
 </document>
