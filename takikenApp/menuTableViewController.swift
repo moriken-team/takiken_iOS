@@ -10,7 +10,7 @@ import UIKit
 
 class menuTableViewController: UITableViewController, UITableViewDelegate,CLLocationManagerDelegate {
 
-    let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+    let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     let categoryList = ["ホーム","問題解答","問題作成","たきざわMAP"]
     var gpsLocationManager = CLLocationManager()
     var checkGps: String?
@@ -51,7 +51,7 @@ class menuTableViewController: UITableViewController, UITableViewDelegate,CLLoca
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //let cell = tableView.dequeueReusableCellWithIdentifier("CellIdentifier", forIndexPath: indexPath) as UITableViewCell
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! UITableViewCell
         println("番号 = \(indexPath.row)")
         cell.textLabel?.text = categoryList[indexPath.row]
 
@@ -65,17 +65,17 @@ class menuTableViewController: UITableViewController, UITableViewDelegate,CLLoca
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         if indexPath.row == 0 {
             println("home kita---")
-            appDelegate.slidingViewController?.topViewController = storyBoard.instantiateViewControllerWithIdentifier("Top") as UIViewController
+            appDelegate.slidingViewController?.topViewController = storyBoard.instantiateViewControllerWithIdentifier("Top") as! UIViewController
         } else if indexPath.row == 1 {
             println("answer kita---")
-            appDelegate.slidingViewController?.topViewController = storyBoard.instantiateViewControllerWithIdentifier("answerTop") as UIViewController
+            appDelegate.slidingViewController?.topViewController = storyBoard.instantiateViewControllerWithIdentifier("answerTop") as! UIViewController
         } else if indexPath.row == 2 {
             println("create kita---")
-            appDelegate.slidingViewController?.topViewController = storyBoard.instantiateViewControllerWithIdentifier("createTop") as UIViewController
+            appDelegate.slidingViewController?.topViewController = storyBoard.instantiateViewControllerWithIdentifier("createTop") as! UIViewController
         } else if indexPath.row == 3 {
             println("map kita---")
             //startGpsManager()
-            appDelegate.slidingViewController?.topViewController = storyBoard.instantiateViewControllerWithIdentifier("mapTop") as UIViewController
+            appDelegate.slidingViewController?.topViewController = storyBoard.instantiateViewControllerWithIdentifier("mapTop") as! UIViewController
         }
         appDelegate.slidingViewController?.resetTopViewAnimated(true)
     }

@@ -10,7 +10,7 @@ import UIKit
 
 class mapTopViewController: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
 
-    let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+    let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     var googleMap: GMSMapView!
     var gpsLocationManager = CLLocationManager()
     var checkGetGps: Bool?
@@ -58,8 +58,14 @@ class mapTopViewController: UIViewController, GMSMapViewDelegate, CLLocationMana
         let zoom: Float = 15
         let camera: GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(lat,longitude: lon,zoom: zoom);
         let camera2: GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(lat2,longitude: lon2,zoom: zoom);
+        let camera3: GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(39.856134,longitude: 141.000232,zoom: zoom);
+        let camera4: GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(39.775439,longitude: 140.991821,zoom: zoom);
+        let camera5: GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(39.825423,longitude: 141.022892,zoom: zoom);
         let gpsMarker: GMSMarker = GMSMarker()
         let gpsMarker2: GMSMarker = GMSMarker()
+        let gpsMarker3: GMSMarker = GMSMarker()
+        let gpsMarker4: GMSMarker = GMSMarker()
+        let gpsMarker5: GMSMarker = GMSMarker()
         
         googleMap = GMSMapView(frame: CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height))
         googleMap.camera = camera
@@ -67,8 +73,8 @@ class mapTopViewController: UIViewController, GMSMapViewDelegate, CLLocationMana
         
         self.view.addSubview(googleMap)
         gpsMarker.position = camera.target
-        gpsMarker.title = "盛岡駅"
-        gpsMarker.snippet = "→詳細を見る←"
+        gpsMarker.title = "現在地"
+        //gpsMarker.snippet = "→詳細を見る←"
         gpsMarker.appearAnimation = kGMSMarkerAnimationPop
         gpsMarker.map = googleMap
         
@@ -77,6 +83,24 @@ class mapTopViewController: UIViewController, GMSMapViewDelegate, CLLocationMana
         gpsMarker2.snippet = "→詳細を見る←"
         gpsMarker2.appearAnimation = kGMSMarkerAnimationPop
         gpsMarker2.map = googleMap
+        
+        gpsMarker3.position = camera3.target
+        gpsMarker3.title = "岩手山"
+        gpsMarker3.snippet = "→詳細を見る←"
+        gpsMarker3.appearAnimation = kGMSMarkerAnimationPop
+        gpsMarker3.map = googleMap
+        
+        gpsMarker4.position = camera4.target
+        gpsMarker4.title = "小岩井農場"
+        gpsMarker4.snippet = "→詳細を見る←"
+        gpsMarker4.appearAnimation = kGMSMarkerAnimationPop
+        gpsMarker4.map = googleMap
+        
+        gpsMarker5.position = camera5.target
+        gpsMarker5.title = "鞍掛山"
+        gpsMarker5.snippet = "→詳細を見る←"
+        gpsMarker5.appearAnimation = kGMSMarkerAnimationPop
+        gpsMarker5.map = googleMap
         /*** GoogleMap利用の処理 end ***/
     }
     
@@ -85,21 +109,21 @@ class mapTopViewController: UIViewController, GMSMapViewDelegate, CLLocationMana
         println("Author : \(status)")
         
         var statusStr: String?
-        switch (status) {
-        case .NotDetermined:
-            statusStr = "NotDetermined"
-            if gpsLocationManager.respondsToSelector("requestWhenInUseAuthorization") {
-                gpsLocationManager.requestWhenInUseAuthorization()
-            }
-        case .Restricted:
-            statusStr = "Restricted"
-        case .Denied:
-            statusStr = "Denied"
-        case .Authorized:
-            statusStr = "Authorized"
-        case .AuthorizedWhenInUse:
-            statusStr = "AuthorizedWhenInUse"
-        }
+//        switch (status) {
+//        case .NotDetermined:
+//            statusStr = "NotDetermined"
+//            if gpsLocationManager.respondsToSelector("requestWhenInUseAuthorization") {
+//                gpsLocationManager.requestWhenInUseAuthorization()
+//            }
+//        case .Restricted:
+//            statusStr = "Restricted"
+//        case .Denied:
+//            statusStr = "Denied"
+//        //case .Authorized:
+//            //statusStr = "Authorized"
+//        case .AuthorizedWhenInUse:
+//            statusStr = "AuthorizedWhenInUse"
+//        }
     }
     
     //位置情報の取得に成功したときに呼ばれるデリゲートメソッド

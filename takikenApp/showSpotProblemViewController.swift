@@ -14,6 +14,16 @@ class showSpotProblemViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        //スクリーンの幅
+        let screenWidth = UIScreen.mainScreen().bounds.size.width;
+        //スクリーンの高さ
+        let screenHeight = UIScreen.mainScreen().bounds.size.height;
+        //CGRectで取得
+        let myImage = UIImage(named: "kokuban.jpg")!
+        var myImageView = UIImageView()
+        myImageView.image = myImage
+        myImageView.frame = CGRectMake(0, 64, screenWidth, screenHeight - 109)
+        //self.view.addSubview(myImageView)
     }
 
     override func didReceiveMemoryWarning() {

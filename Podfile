@@ -1,6 +1,2 @@
 platform :ios, '7.0'
 pod 'ECSlidingViewController', '~> 2.0.3'
-pod 'RNGridMenu', '~> 0.1.2'
-pod 'SMCalloutView', '~> 2.0'
-pod 'SVProgressHUD'
-pod 'AFNetworking'
