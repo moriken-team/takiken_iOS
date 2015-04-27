@@ -2,3 +2,8 @@
 !*.xcodeproj/project.pbxproj
 !*.xcworkspace/contents.xcworkspacedata
 animated-tab-bar/*
+xcuserdata
+
+#CocoaPod
+Pods/*
+Podfile.lock
