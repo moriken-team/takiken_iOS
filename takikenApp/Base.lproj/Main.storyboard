@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -738,91 +738,34 @@
             <objects>
                 <viewController id="Wtd-K0-Its" customClass="questionsAndAnswersCreateViewController" customModule="takikenApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="FX1-sb-l2b"/>
-                        <viewControllerLayoutGuide type="bottom" id="3xi-qt-0yS"/>
+                        <viewControllerLayoutGuide type="top" id="nfG-C7-uOH"/>
+                        <viewControllerLayoutGuide type="bottom" id="l2A-gH-a3E"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3z6-qU-Trq">
+                    <view key="view" contentMode="scaleToFill" id="ogu-sz-C3T">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j0T-8o-zam">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zgp-Rd-kY7">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="問題作成" id="gWV-0V-F80">
-                                        <barButtonItem key="leftBarButtonItem" title="menu" id="Oyl-4d-Tix">
+                                    <navigationItem title="問題作成" id="363-rn-cE4">
+                                        <barButtonItem key="leftBarButtonItem" title="menu" id="H0w-Ln-8QI">
                                             <connections>
-                                                <action selector="menuShowOnTap:" destination="Wtd-K0-Its" id="16c-Xd-mIf"/>
+                                                <action selector="menuShowOnTap:" destination="Wtd-K0-Its" id="Vnt-sl-XkQ"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kokuban.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Sfh-1N-739">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kokuban.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ahB-94-55e">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="問題を作りながら滝沢市について勉強してみましょう" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10U-qH-8Vb">
-                                <rect key="frame" x="26" y="158" width="268" height="62"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1問1答形式の問題を考えましょう" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wya-Ky-i1R">
-                                <rect key="frame" x="21" y="228" width="333" height="62"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="1" green="0.11667719926781839" blue="0.056686452427985645" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="highlightedColor" red="0.9714059855813274" green="0.98851788935736873" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="問題文" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yv5-XL-H6M">
-                                <rect key="frame" x="32" y="274" width="77" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1問1答問題を作ろう！" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJ4-Tl-gNO">
-                                <rect key="frame" x="26" y="98" width="333" height="58"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mgE-x9-aHx">
-                                <rect key="frame" x="32" y="318" width="311" height="90"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="答え" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZz-OM-X0v">
-                                <rect key="frame" x="32" y="409" width="77" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aCK-vx-dUg">
-                                <rect key="frame" x="32" y="453" width="311" height="57"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="キーワード" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="maW-5C-iEP">
-                                <rect key="frame" x="32" y="509" width="110" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vOZ-15-ZYX">
-                                <rect key="frame" x="32" y="553" width="311" height="57"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pen_mannenhitsu.png" translatesAutoresizingMaskIntoConstraints="NO" id="8q5-cf-0MU">
-                                <rect key="frame" x="287" y="145" width="72" height="87"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="j0T-8o-zam" firstAttribute="top" secondItem="3z6-qU-Trq" secondAttribute="topMargin" constant="20" id="CG2-Ea-lws"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="j0T-8o-zam" secondAttribute="trailing" constant="-16" id="ViM-fJ-WIS"/>
-                            <constraint firstItem="j0T-8o-zam" firstAttribute="leading" secondItem="3z6-qU-Trq" secondAttribute="leadingMargin" constant="-16" id="xdk-6u-0yO"/>
+                            <constraint firstItem="Zgp-Rd-kY7" firstAttribute="leading" secondItem="ogu-sz-C3T" secondAttribute="leadingMargin" constant="-16" id="H77-OD-uAo"/>
+                            <constraint firstItem="Zgp-Rd-kY7" firstAttribute="top" secondItem="ogu-sz-C3T" secondAttribute="topMargin" constant="20" id="TSu-O4-YK6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zgp-Rd-kY7" secondAttribute="trailing" constant="-16" id="tBL-TE-vaG"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="1問1答問題" image="user_00084.png" id="wch-GV-1LY" customClass="RAMAnimatedTabBarItem" customModule="takikenApp" customModuleProvider="target">
@@ -831,11 +774,41 @@
                         </connections>
                     </tabBarItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="backgroundImage" destination="ahB-94-55e" id="5El-Pg-MwY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WwA-2q-d0c" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="46B-To-VfA" customClass="RAMBounceAnimation" customModule="takikenApp" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="1161.5" y="2567.5"/>
+            <point key="canvasLocation" x="1161.5" y="2578.5"/>
+        </scene>
+        <!--Test View Controller-->
+        <scene sceneID="jJQ-AZ-ZKP">
+            <objects>
+                <viewController id="eWH-DM-ehE" customClass="testViewController" customModule="takikenApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2hK-Oy-9iN"/>
+                        <viewControllerLayoutGuide type="bottom" id="kf5-J6-hZM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9ss-Vo-dda">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="あああ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iM-G7-myz">
+                                <rect key="frame" x="86" y="140" width="51" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Inv-2T-mHT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2525" y="1882"/>
         </scene>
         <!--Animated Tab Bar Controller-->
         <scene sceneID="OyE-tE-3CU">
@@ -956,7 +929,6 @@
         <image name="icon_pin_00160.png" width="30" height="30"/>
         <image name="kokuban.jpg" width="637" height="486"/>
         <image name="machidukuri_building.png" width="380" height="400"/>
-        <image name="pen_mannenhitsu.png" width="360" height="400"/>
         <image name="pose_ganbarou_man.png" width="400" height="400"/>
         <image name="study_yaruki_nai.png" width="400" height="384"/>
         <image name="user_00084.png" width="30" height="30"/>

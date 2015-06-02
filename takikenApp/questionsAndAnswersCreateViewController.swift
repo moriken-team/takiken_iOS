@@ -12,6 +12,7 @@ class questionsAndAnswersCreateViewController: UIViewController {
     
     let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
+    @IBOutlet weak var backgroundImage: UIImageView!
     @IBAction func menuShowOnTap(sender: AnyObject) {
         appDelegate.slidingViewController?.anchorTopViewToRightAnimated(true)
     }
@@ -25,11 +26,17 @@ class questionsAndAnswersCreateViewController: UIViewController {
         //スクリーンの高さ
         let screenHeight = UIScreen.mainScreen().bounds.size.height;
         //CGRectで取得
-        let myImage = UIImage(named: "kokuban.jpg")!
-        var myImageView = UIImageView()
-        myImageView.image = myImage
-        myImageView.frame = CGRectMake(0, 64, screenWidth, screenHeight - 109)
+//        let myImage = UIImage(named: "kokuban.jpg")!
+//        var myImageView = UIImageView()
+//        myImageView.image = myImage
+//        myImageView.frame = CGRectMake(0, 64, screenWidth, screenHeight - 109)
         //self.view.addSubview(myImageView)
+        let imagePosition = backgroundImage.bounds
+        let scrollView = UIScrollView()
+        scrollView.frame = CGRectMake(backgroundImage.frame.origin.x, backgroundImage.frame.origin.y, imagePosition.width, imagePosition.height)
+        scrollView.contentSize = CGSizeMake(imagePosition.width, 1000)
+//        backgroundImage.addSubview(scrollView)
+        self.view.addSubview(scrollView)
     }
     
     override func viewWillAppear(animated: Bool) {
