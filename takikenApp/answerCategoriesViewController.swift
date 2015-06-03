@@ -1,5 +1,5 @@
 //
-//  oneQuestionAnswerViewController.swift
+//  answerCategoriesViewController.swift
 //  takikenApp
 //
 //  Created by 井上 裕之 on 2015/03/03.
@@ -8,15 +8,19 @@
 
 import UIKit
 
-class oneQuestionAnswerViewController: UIViewController, UIPickerViewDelegate,UIToolbarDelegate {
+class answerCategoriesViewController: UIViewController, UIPickerViewDelegate,UIToolbarDelegate {
     
     let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-    var num = ["2013年度","2014年度"]
+    var num = ["滝沢のなりたち・概要","自然", "施設", "神社・仏閣", "伝統・文化", "都市整備", "交通", "人物", "イベント", "産業", "生涯学習", "メディア"]
     var toolBar: UIToolbar!
     var textField: UITextField!
-
+    
     @IBAction func menuShowOnTap(sender: AnyObject) {
         appDelegate.slidingViewController?.anchorTopViewToRightAnimated(true)
+    }
+    
+    @IBAction func challengeProbem(sender: AnyObject) {
+        performSegueWithIdentifier("nextAnswer", sender: self)
     }
     
     override func viewDidLoad() {
@@ -35,11 +39,11 @@ class oneQuestionAnswerViewController: UIViewController, UIPickerViewDelegate,UI
         //self.view.addSubview(myImageView)
         
         //textField = UITextField(frame: CGRectMake(self.view.frame.size.width/3, 200, 0, 0))
-        textField = UITextField(frame: CGRectMake(195, 355, 0, 0))
-        textField.placeholder = "年度を選択してください"
+        textField = UITextField(frame: CGRectMake(210, 392, 100, 0))
+        textField.placeholder = "未選択"
         textField.sizeToFit()
         textField.textColor = UIColor.whiteColor()
-        textField.font = UIFont.systemFontOfSize(28)
+        textField.font = UIFont.systemFontOfSize(22)
         self.view.addSubview(textField)
         
         var pickerView = UIPickerView()
@@ -54,11 +58,12 @@ class oneQuestionAnswerViewController: UIViewController, UIPickerViewDelegate,UI
         toolBar.tintColor = UIColor.whiteColor()
         toolBar.backgroundColor = UIColor.blackColor()
         
-        let toolBarBtn = UIBarButtonItem(title: "完了", style: .Bordered, target: self, action: "tappedToolBarBtn:")
+        let toolBarBtn = UIBarButtonItem(title: "完了", style: .Done, target: self, action: "tappedToolBarBtn:")
         toolBarBtn.tag = 1
         toolBar.items = [toolBarBtn]
         
         textField.inputAccessoryView = toolBar
+        
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView!) -> Int {
@@ -72,6 +77,7 @@ class oneQuestionAnswerViewController: UIViewController, UIPickerViewDelegate,UI
     }
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         textField.text = num[row]
+        textField.sizeToFit()
     }
     func tappedToolBarBtn(sender: UIBarButtonItem) {
         textField.resignFirstResponder()

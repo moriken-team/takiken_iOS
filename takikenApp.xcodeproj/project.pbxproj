@@ -73,6 +73,19 @@
 		87671AC21AA7E2A80046E9A2 /* bunbougu_memo.png in Resources */ = {isa = PBXBuildFile; fileRef = 87671AC11AA7E2A80046E9A2 /* bunbougu_memo.png */; };
 		87671AC41AA7E3600046E9A2 /* pose_ganbarou_man.png in Resources */ = {isa = PBXBuildFile; fileRef = 87671AC31AA7E3600046E9A2 /* pose_ganbarou_man.png */; };
 		87671AC61AA7E8AE0046E9A2 /* machidukuri_building.png in Resources */ = {isa = PBXBuildFile; fileRef = 87671AC51AA7E8AE0046E9A2 /* machidukuri_building.png */; };
+		87CCBAB11B1F7663008B7708 /* answerSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CCBAB01B1F7663008B7708 /* answerSelectionViewController.swift */; };
+		87CCBAB31B1F78A3008B7708 /* book.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CCBAB21B1F78A3008B7708 /* book.png */; };
+		87CCBAB81B1F79DC008B7708 /* btn_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CCBAB41B1F79DC008B7708 /* btn_red.png */; };
+		87CCBAB91B1F79DC008B7708 /* btn_orenge.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CCBAB51B1F79DC008B7708 /* btn_orenge.png */; };
+		87CCBABA1B1F79DC008B7708 /* btn_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CCBAB61B1F79DC008B7708 /* btn_green.png */; };
+		87CCBABB1B1F79DC008B7708 /* btn_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CCBAB71B1F79DC008B7708 /* btn_blue.png */; };
+		87CCBABD1B1F7CDB008B7708 /* docter.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CCBABC1B1F7CDB008B7708 /* docter.png */; };
+		87CCBAC61B1F8099008B7708 /* kaminari.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CCBAC41B1F8099008B7708 /* kaminari.png */; };
+		87CCBAC71B1F8099008B7708 /* kusudama.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CCBAC51B1F8099008B7708 /* kusudama.png */; };
+		87CCBAC91B1F80E5008B7708 /* fukidasi.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CCBAC81B1F80E5008B7708 /* fukidasi.png */; };
+		87CCBACB1B1F85C2008B7708 /* gal.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CCBACA1B1F85C2008B7708 /* gal.png */; };
+		87CCBACD1B1F871A008B7708 /* answerResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CCBACC1B1F871A008B7708 /* answerResultViewController.swift */; };
+		87CCBACF1B1F872D008B7708 /* answerTotalResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CCBACE1B1F872D008B7708 /* answerTotalResultViewController.swift */; };
 		87F002891AA8015500C60145 /* ひろぽん_Fotor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 87F002881AA8015500C60145 /* ひろぽん_Fotor.jpg */; };
 		87F61FF41A8F3D2700607F94 /* menuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F61FF31A8F3D2700607F94 /* menuTableViewController.swift */; };
 		87FB72DD1AA324CD007A461D /* mapTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FB72DC1AA324CD007A461D /* mapTopViewController.swift */; };
@@ -148,6 +161,19 @@
 		87671AC31AA7E3600046E9A2 /* pose_ganbarou_man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pose_ganbarou_man.png; sourceTree = "<group>"; };
 		87671AC51AA7E8AE0046E9A2 /* machidukuri_building.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = machidukuri_building.png; sourceTree = "<group>"; };
 		876860851A8F41C6001DF304 /* takikenApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "takikenApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		87CCBAB01B1F7663008B7708 /* answerSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = answerSelectionViewController.swift; sourceTree = "<group>"; };
+		87CCBAB21B1F78A3008B7708 /* book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = book.png; sourceTree = "<group>"; };
+		87CCBAB41B1F79DC008B7708 /* btn_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_red.png; sourceTree = "<group>"; };
+		87CCBAB51B1F79DC008B7708 /* btn_orenge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_orenge.png; sourceTree = "<group>"; };
+		87CCBAB61B1F79DC008B7708 /* btn_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_green.png; sourceTree = "<group>"; };
+		87CCBAB71B1F79DC008B7708 /* btn_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_blue.png; sourceTree = "<group>"; };
+		87CCBABC1B1F7CDB008B7708 /* docter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = docter.png; sourceTree = "<group>"; };
+		87CCBAC41B1F8099008B7708 /* kaminari.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kaminari.png; sourceTree = "<group>"; };
+		87CCBAC51B1F8099008B7708 /* kusudama.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kusudama.png; sourceTree = "<group>"; };
+		87CCBAC81B1F80E5008B7708 /* fukidasi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fukidasi.png; sourceTree = "<group>"; };
+		87CCBACA1B1F85C2008B7708 /* gal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gal.png; sourceTree = "<group>"; };
+		87CCBACC1B1F871A008B7708 /* answerResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = answerResultViewController.swift; sourceTree = "<group>"; };
+		87CCBACE1B1F872D008B7708 /* answerTotalResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = answerTotalResultViewController.swift; sourceTree = "<group>"; };
 		87F002881AA8015500C60145 /* ひろぽん_Fotor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ひろぽん_Fotor.jpg"; sourceTree = "<group>"; };
 		87F61FF31A8F3D2700607F94 /* menuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuTableViewController.swift; sourceTree = "<group>"; };
 		87FB72DC1AA324CD007A461D /* mapTopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapTopViewController.swift; sourceTree = "<group>"; };
@@ -264,6 +290,9 @@
 				87FB72DC1AA324CD007A461D /* mapTopViewController.swift */,
 				87401E6E1AA7D216006D46B5 /* showSpotProblemViewController.swift */,
 				87401E701AA7D225006D46B5 /* createSpotProblemViewController.swift */,
+				87CCBAB01B1F7663008B7708 /* answerSelectionViewController.swift */,
+				87CCBACC1B1F871A008B7708 /* answerResultViewController.swift */,
+				87CCBACE1B1F872D008B7708 /* answerTotalResultViewController.swift */,
 			);
 			path = takikenApp;
 			sourceTree = "<group>";
@@ -271,6 +300,16 @@
 		872081231A8F2FDD0081EE80 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				87CCBACA1B1F85C2008B7708 /* gal.png */,
+				87CCBAC81B1F80E5008B7708 /* fukidasi.png */,
+				87CCBAC41B1F8099008B7708 /* kaminari.png */,
+				87CCBAC51B1F8099008B7708 /* kusudama.png */,
+				87CCBABC1B1F7CDB008B7708 /* docter.png */,
+				87CCBAB41B1F79DC008B7708 /* btn_red.png */,
+				87CCBAB51B1F79DC008B7708 /* btn_orenge.png */,
+				87CCBAB61B1F79DC008B7708 /* btn_green.png */,
+				87CCBAB71B1F79DC008B7708 /* btn_blue.png */,
+				87CCBAB21B1F78A3008B7708 /* book.png */,
 				87F002881AA8015500C60145 /* ひろぽん_Fotor.jpg */,
 				87671AC51AA7E8AE0046E9A2 /* machidukuri_building.png */,
 				87671AC31AA7E3600046E9A2 /* pose_ganbarou_man.png */,
@@ -449,10 +488,17 @@
 			files = (
 				872AC43A1AA6D8560052393C /* libcurses.dylib in Resources */,
 				872AC43B1AA6D8560052393C /* GLKit.framework in Resources */,
+				87CCBABA1B1F79DC008B7708 /* btn_green.png in Resources */,
+				87CCBAB31B1F78A3008B7708 /* book.png in Resources */,
 				87671AC01AA7E1190046E9A2 /* pen_mannenhitsu.png in Resources */,
 				872AC43C1AA6D8560052393C /* GoogleMaps.framework in Resources */,
+				87CCBAC91B1F80E5008B7708 /* fukidasi.png in Resources */,
 				872AC43D1AA6D8560052393C /* SystemConfiguration.framework in Resources */,
+				87CCBACB1B1F85C2008B7708 /* gal.png in Resources */,
+				87CCBABB1B1F79DC008B7708 /* btn_blue.png in Resources */,
 				872AC43E1AA6D8560052393C /* QuartzCore.framework in Resources */,
+				87CCBAB81B1F79DC008B7708 /* btn_red.png in Resources */,
+				87CCBAC61B1F8099008B7708 /* kaminari.png in Resources */,
 				87F002891AA8015500C60145 /* ひろぽん_Fotor.jpg in Resources */,
 				872AC43F1AA6D8560052393C /* OpenGLES.framework in Resources */,
 				872AC4401AA6D8560052393C /* libz.dylib in Resources */,
@@ -461,6 +507,7 @@
 				872AC4431AA6D8560052393C /* CoreText.framework in Resources */,
 				872AC4441AA6D8560052393C /* AVFoundation.framework in Resources */,
 				872AC4451AA6D8560052393C /* CoreData.framework in Resources */,
+				87CCBABD1B1F7CDB008B7708 /* docter.png in Resources */,
 				872AC4461AA6D8560052393C /* CoreLocation.framework in Resources */,
 				872AC4371AA6D70E0052393C /* GoogleMaps.bundle in Resources */,
 				8720812B1A8F2FDD0081EE80 /* Main.storyboard in Resources */,
@@ -472,9 +519,11 @@
 				872AC3FA1AA5BB560052393C /* drop.png in Resources */,
 				872AC3F81AA5BB3D0052393C /* icon_pin_00160.png in Resources */,
 				8720812D1A8F2FDD0081EE80 /* Images.xcassets in Resources */,
+				87CCBAC71B1F8099008B7708 /* kusudama.png in Resources */,
 				87401E771AA7DB02006D46B5 /* btn057_03.png in Resources */,
 				87671AC21AA7E2A80046E9A2 /* bunbougu_memo.png in Resources */,
 				872AC3F61AA4CAD00052393C /* user_00084.png in Resources */,
+				87CCBAB91B1F79DC008B7708 /* btn_orenge.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +578,7 @@
 				872AC3E21AA386B50052393C /* RAMItemAnimationProtocol.swift in Sources */,
 				87401E711AA7D225006D46B5 /* createSpotProblemViewController.swift in Sources */,
 				87F61FF41A8F3D2700607F94 /* menuTableViewController.swift in Sources */,
+				87CCBAB11B1F7663008B7708 /* answerSelectionViewController.swift in Sources */,
 				872AC3E11AA386B50052393C /* RAMAnimatedTabBarController.swift in Sources */,
 				872AC3EE1AA388A50052393C /* RAMBounceAnimation.swift in Sources */,
 				872AC3EF1AA388A50052393C /* RAMFrameItemAnimation.swift in Sources */,
@@ -536,9 +586,11 @@
 				872AC3F01AA388A50052393C /* RAMFumeAnimation.swift in Sources */,
 				872AC3F21AA388A50052393C /* RAMTransitionItemAnimation.swift in Sources */,
 				872AC4081AA5DF280052393C /* hundredQuestionAnswerViewController.swift in Sources */,
+				87CCBACD1B1F871A008B7708 /* answerResultViewController.swift in Sources */,
 				872AC4021AA5CE670052393C /* userSnsManagerViewController.swift in Sources */,
 				872AC4061AA5DF0A0052393C /* answerCategoriesViewController.swift in Sources */,
 				872081261A8F2FDD0081EE80 /* AppDelegate.swift in Sources */,
+				87CCBACF1B1F872D008B7708 /* answerTotalResultViewController.swift in Sources */,
 				872AC40A1AA5FA790052393C /* questionsAndAnswersCreateViewController.swift in Sources */,
 				87FB72DD1AA324CD007A461D /* mapTopViewController.swift in Sources */,
 				872AC3FE1AA5CC650052393C /* rankingViewController.swift in Sources */,
