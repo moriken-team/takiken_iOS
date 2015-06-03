@@ -27,7 +27,7 @@
 		872AC3FC1AA5C6000052393C /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872AC3FB1AA5C6000052393C /* profileViewController.swift */; };
 		872AC3FE1AA5CC650052393C /* rankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872AC3FD1AA5CC650052393C /* rankingViewController.swift */; };
 		872AC4021AA5CE670052393C /* userSnsManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872AC4011AA5CE670052393C /* userSnsManagerViewController.swift */; };
-		872AC4061AA5DF0A0052393C /* oneQuestionAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872AC4051AA5DF0A0052393C /* oneQuestionAnswerViewController.swift */; };
+		872AC4061AA5DF0A0052393C /* answerCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872AC4051AA5DF0A0052393C /* answerCategoriesViewController.swift */; };
 		872AC4081AA5DF280052393C /* hundredQuestionAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872AC4071AA5DF280052393C /* hundredQuestionAnswerViewController.swift */; };
 		872AC40A1AA5FA790052393C /* questionsAndAnswersCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872AC4091AA5FA790052393C /* questionsAndAnswersCreateViewController.swift */; };
 		872AC40C1AA5FA980052393C /* selectionProblemCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872AC40B1AA5FA980052393C /* selectionProblemCreateViewController.swift */; };
@@ -114,7 +114,7 @@
 		872AC3FB1AA5C6000052393C /* profileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		872AC3FD1AA5CC650052393C /* rankingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = rankingViewController.swift; path = Animations/rankingViewController.swift; sourceTree = "<group>"; };
 		872AC4011AA5CE670052393C /* userSnsManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userSnsManagerViewController.swift; sourceTree = "<group>"; };
-		872AC4051AA5DF0A0052393C /* oneQuestionAnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = oneQuestionAnswerViewController.swift; sourceTree = "<group>"; };
+		872AC4051AA5DF0A0052393C /* answerCategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = answerCategoriesViewController.swift; sourceTree = "<group>"; };
 		872AC4071AA5DF280052393C /* hundredQuestionAnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hundredQuestionAnswerViewController.swift; sourceTree = "<group>"; };
 		872AC4091AA5FA790052393C /* questionsAndAnswersCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = questionsAndAnswersCreateViewController.swift; sourceTree = "<group>"; };
 		872AC40B1AA5FA980052393C /* selectionProblemCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = selectionProblemCreateViewController.swift; sourceTree = "<group>"; };
@@ -257,7 +257,7 @@
 				872AC3FB1AA5C6000052393C /* profileViewController.swift */,
 				872AC3FD1AA5CC650052393C /* rankingViewController.swift */,
 				872AC4011AA5CE670052393C /* userSnsManagerViewController.swift */,
-				872AC4051AA5DF0A0052393C /* oneQuestionAnswerViewController.swift */,
+				872AC4051AA5DF0A0052393C /* answerCategoriesViewController.swift */,
 				872AC4071AA5DF280052393C /* hundredQuestionAnswerViewController.swift */,
 				872AC4091AA5FA790052393C /* questionsAndAnswersCreateViewController.swift */,
 				872AC40B1AA5FA980052393C /* selectionProblemCreateViewController.swift */,
@@ -537,7 +537,7 @@
 				872AC3F21AA388A50052393C /* RAMTransitionItemAnimation.swift in Sources */,
 				872AC4081AA5DF280052393C /* hundredQuestionAnswerViewController.swift in Sources */,
 				872AC4021AA5CE670052393C /* userSnsManagerViewController.swift in Sources */,
-				872AC4061AA5DF0A0052393C /* oneQuestionAnswerViewController.swift in Sources */,
+				872AC4061AA5DF0A0052393C /* answerCategoriesViewController.swift in Sources */,
 				872081261A8F2FDD0081EE80 /* AppDelegate.swift in Sources */,
 				872AC40A1AA5FA790052393C /* questionsAndAnswersCreateViewController.swift in Sources */,
 				87FB72DD1AA324CD007A461D /* mapTopViewController.swift in Sources */,
