@@ -73,7 +73,6 @@
 		87671AC21AA7E2A80046E9A2 /* bunbougu_memo.png in Resources */ = {isa = PBXBuildFile; fileRef = 87671AC11AA7E2A80046E9A2 /* bunbougu_memo.png */; };
 		87671AC41AA7E3600046E9A2 /* pose_ganbarou_man.png in Resources */ = {isa = PBXBuildFile; fileRef = 87671AC31AA7E3600046E9A2 /* pose_ganbarou_man.png */; };
 		87671AC61AA7E8AE0046E9A2 /* machidukuri_building.png in Resources */ = {isa = PBXBuildFile; fileRef = 87671AC51AA7E8AE0046E9A2 /* machidukuri_building.png */; };
-		87B60C051B1DC48900FFFF86 /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B60C041B1DC48800FFFF86 /* testViewController.swift */; };
 		87F002891AA8015500C60145 /* ひろぽん_Fotor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 87F002881AA8015500C60145 /* ひろぽん_Fotor.jpg */; };
 		87F61FF41A8F3D2700607F94 /* menuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F61FF31A8F3D2700607F94 /* menuTableViewController.swift */; };
 		87FB72DD1AA324CD007A461D /* mapTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FB72DC1AA324CD007A461D /* mapTopViewController.swift */; };
@@ -149,7 +148,6 @@
 		87671AC31AA7E3600046E9A2 /* pose_ganbarou_man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pose_ganbarou_man.png; sourceTree = "<group>"; };
 		87671AC51AA7E8AE0046E9A2 /* machidukuri_building.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = machidukuri_building.png; sourceTree = "<group>"; };
 		876860851A8F41C6001DF304 /* takikenApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "takikenApp-Bridging-Header.h"; sourceTree = "<group>"; };
-		87B60C041B1DC48800FFFF86 /* testViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
 		87F002881AA8015500C60145 /* ひろぽん_Fotor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ひろぽん_Fotor.jpg"; sourceTree = "<group>"; };
 		87F61FF31A8F3D2700607F94 /* menuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuTableViewController.swift; sourceTree = "<group>"; };
 		87FB72DC1AA324CD007A461D /* mapTopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapTopViewController.swift; sourceTree = "<group>"; };
@@ -266,7 +264,6 @@
 				87FB72DC1AA324CD007A461D /* mapTopViewController.swift */,
 				87401E6E1AA7D216006D46B5 /* showSpotProblemViewController.swift */,
 				87401E701AA7D225006D46B5 /* createSpotProblemViewController.swift */,
-				87B60C041B1DC48800FFFF86 /* testViewController.swift */,
 			);
 			path = takikenApp;
 			sourceTree = "<group>";
@@ -537,7 +534,6 @@
 				872AC3EF1AA388A50052393C /* RAMFrameItemAnimation.swift in Sources */,
 				872081281A8F2FDD0081EE80 /* ViewController.swift in Sources */,
 				872AC3F01AA388A50052393C /* RAMFumeAnimation.swift in Sources */,
-				87B60C051B1DC48900FFFF86 /* testViewController.swift in Sources */,
 				872AC3F21AA388A50052393C /* RAMTransitionItemAnimation.swift in Sources */,
 				872AC4081AA5DF280052393C /* hundredQuestionAnswerViewController.swift in Sources */,
 				872AC4021AA5CE670052393C /* userSnsManagerViewController.swift in Sources */,
