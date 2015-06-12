@@ -14,7 +14,6 @@ class answerCategoriesViewController: UIViewController, UIPickerViewDelegate,UIT
     var num = ["滝沢のなりたち・概要","自然", "施設", "神社・仏閣", "伝統・文化", "都市整備", "交通", "人物", "イベント", "産業", "生涯学習", "メディア"]
     var toolBar: UIToolbar!
     var textField: UITextField!
-    var _problems:NSMutableArray = NSMutableArray()
     
     @IBAction func menuShowOnTap(sender: AnyObject) {
         appDelegate.slidingViewController?.anchorTopViewToRightAnimated(true)
@@ -32,7 +31,7 @@ class answerCategoriesViewController: UIViewController, UIPickerViewDelegate,UIT
         // *** respons内の問題情報を保存 ***
         let problemMax:NSInteger = json["response"]!["Problems"]!!.count
         for var i = 0; i < problemMax; ++i {
-            _problems[i] = json["response"]!["Problems"]!![i]
+            appDelegate.problems[i] = json["response"]!["Problems"]!![i]
         }
         // *** 問題情報の値取得 => problems[0]["Problem"]!?["sentence"]! as? String ***
         
