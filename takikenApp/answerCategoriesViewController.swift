@@ -8,19 +8,48 @@
 
 import UIKit
 
-class answerCategoriesViewController: UIViewController, UIPickerViewDelegate,UIToolbarDelegate {
+class answerCategoriesViewController: UIViewController, UIPickerViewDelegate,UIToolbarDelegate,NSURLSessionDelegate,NSURLSessionDataDelegate {
     
     let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     var num = ["滝沢のなりたち・概要","自然", "施設", "神社・仏閣", "伝統・文化", "都市整備", "交通", "人物", "イベント", "産業", "生涯学習", "メディア"]
     var toolBar: UIToolbar!
     var textField: UITextField!
+    var _problems:NSMutableArray = NSMutableArray()
     
     @IBAction func menuShowOnTap(sender: AnyObject) {
         appDelegate.slidingViewController?.anchorTopViewToRightAnimated(true)
     }
     
     @IBAction func challengeProbem(sender: AnyObject) {
-        performSegueWithIdentifier("nextAnswer", sender: self)
+        // *** APIによる問題取得 ***
+        let params = "kentei_id=1&employ=2012&grade=3&category_id=1&item=5"
+        let requestUrl = NSURL(string: "http://sakumon.jp/app/LK_API/problems/index.json?\(params)")
+        let request:NSURLRequest = NSURLRequest(URL: requestUrl!)
+        let requestData:NSData = NSURLConnection.sendSynchronousRequest(request, returningResponse: nil, error: nil)!
+        var json:NSMutableDictionary = NSJSONSerialization.JSONObjectWithData(requestData, options: NSJSONReadingOptions.AllowFragments, error: nil) as! NSMutableDictionary
+        println(json["response"]!["Problems"]!![0]["Problem"]!!["sentence"])
+        
+        // *** respons内の問題情報を保存 ***
+        let problemMax:NSInteger = json["response"]!["Problems"]!!.count
+        for var i = 0; i < problemMax; ++i {
+            _problems[i] = json["response"]!["Problems"]!![i]
+        }
+        // *** 問題情報の値取得 => problems[0]["Problem"]!?["sentence"]! as? String ***
+        
+        // ***　非同期処理の場合は以下↓ ***
+        //let config:NSURLSessionConfiguration = NSURLSessionConfiguration.defaultSessionConfiguration()
+        //let apiSession:NSURLSession = NSURLSession(configuration: config, delegate: self, delegateQueue: nil)
+        //let requestTask:NSURLSessionDataTask = apiSession.dataTaskWithURL(requestUrl!, completionHandler: {(data, response, error) -> Void in
+        //    //var json:Dictionary<String, AnyObject> = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil) as! Dictionary
+        //    //NSDictionaryの場合は下記の変換をする
+        //    var json:NSMutableDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil) as! NSMutableDictionary
+        //    let problemMax:NSInteger = json["response"]!["Problems"]!!.count
+        //    println(self._problems[0]["Problem"]!?["sentence"]!)
+        //    self.test.text = self._problems[0]["Problem"]!?["sentence"]! as? String
+        //    self.performSegueWithIdentifier("nextAnswer", sender: self)
+        //})
+        //requestTask.resume()
+        
     }
     
     override func viewDidLoad() {
