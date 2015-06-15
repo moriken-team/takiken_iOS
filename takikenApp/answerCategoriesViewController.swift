@@ -11,7 +11,7 @@ import UIKit
 class answerCategoriesViewController: UIViewController, UIPickerViewDelegate,UIToolbarDelegate,NSURLSessionDelegate,NSURLSessionDataDelegate {
     
     let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-    var num = ["滝沢のなりたち・概要","自然", "施設", "神社・仏閣", "伝統・文化", "都市整備", "交通", "人物", "イベント", "産業", "生涯学習", "メディア"]
+    var category = ["滝沢のなりたち・概要","自然", "施設", "神社・仏閣", "伝統・文化", "都市整備", "交通", "人物", "イベント", "産業", "生涯学習", "メディア"]
     var toolBar: UIToolbar!
     var textField: UITextField!
     
@@ -98,13 +98,13 @@ class answerCategoriesViewController: UIViewController, UIPickerViewDelegate,UIT
         return 1
     }
     func pickerView(pickerView: UIPickerView!, numberOfRowsInComponent component: Int) -> Int {
-        return num.count
+        return category.count
     }
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-        return num[row]
+        return category[row]
     }
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        textField.text = num[row]
+        textField.text = category[row]
         textField.sizeToFit()
     }
     func tappedToolBarBtn(sender: UIBarButtonItem) {
