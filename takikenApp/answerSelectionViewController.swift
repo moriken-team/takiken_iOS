@@ -40,6 +40,7 @@ class answerSelectionViewController: UIViewController {
         let shuffleAnswers = shuffleArray(defaultAnswers)
         //正誤判定用するために正解選択肢の情報を保存
         appDelegate.rightAnswer = defaultAnswers[0]
+        appDelegate.rightDescription = appDelegate.problems[0]["Problem"]!!["description"]! as? String
         
         println(defaultAnswers)
         

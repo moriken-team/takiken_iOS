@@ -550,7 +550,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="book.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qgn-j8-lTb">
                                 <rect key="frame" x="7" y="130" width="358" height="235"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZK-A1-YNL">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="CZK-A1-YNL">
                                 <rect key="frame" x="18" y="428" width="339" height="73"/>
                                 <state key="normal" title="選択肢2" backgroundImage="btn_green.png">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -560,7 +560,7 @@
                                     <action selector="choice:" destination="3kt-Gj-5tK" eventType="touchUpInside" id="AgI-br-QbQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4W-a2-Xkk">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="j4W-a2-Xkk">
                                 <rect key="frame" x="17" y="496" width="339" height="73"/>
                                 <state key="normal" title="選択肢3" backgroundImage="btn_orenge.png">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -570,7 +570,7 @@
                                     <action selector="choice:" destination="3kt-Gj-5tK" eventType="touchUpInside" id="icC-XF-cmS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gR7-rn-Vrb">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="gR7-rn-Vrb">
                                 <rect key="frame" x="18" y="567" width="339" height="73"/>
                                 <state key="normal" title="選択肢4" backgroundImage="btn_blue.png">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -657,13 +657,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWs-55-BHB">
-                                <rect key="frame" x="105" y="329" width="239" height="58"/>
+                                <rect key="frame" x="99" y="329" width="245" height="58"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="解説文" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wH-3W-pbz">
-                                <rect key="frame" x="38" y="384" width="299" height="136"/>
+                                <rect key="frame" x="38" y="377" width="299" height="136"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -702,6 +702,10 @@
                     <navigationItem key="navigationItem" title="問題解答" id="4kf-os-PCl"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="descriptionLabel" destination="1wH-3W-pbz" id="dv9-xk-weP"/>
+                        <outlet property="resultImage" destination="7xN-de-XwW" id="IfT-4z-KZ9"/>
+                        <outlet property="resultLabel" destination="3eP-tm-j0f" id="Rj1-EA-I70"/>
+                        <outlet property="rightAnswerLabel" destination="QWs-55-BHB" id="DT6-O7-0Xg"/>
                         <segue destination="szs-LK-Ayj" kind="modal" identifier="nextAnswer" id="i3I-Su-Stu"/>
                         <segue destination="paC-E9-G47" kind="show" identifier="totalResult" id="R9U-Vw-eqJ"/>
                     </connections>

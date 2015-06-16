@@ -9,16 +9,44 @@
 import UIKit
 
 class answerResultViewController: UIViewController {
+    
+    var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
 
+    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var rightAnswerLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var resultImage: UIImageView!
+    
     @IBAction func nextAction(sender: AnyObject) {
         performSegueWithIdentifier("totalResult", sender: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if isCorrectAnswer() {
+            resultLabel.text = "正解"
+            resultImage.image = UIImage(named: "kusudama.png")
+        }else{
+            resultLabel.text = "不正解"
+            resultImage.image = UIImage(named: "kaminari.png")
+        }
+        rightAnswerLabel.text = appDelegate.rightAnswer
+        descriptionLabel.text = appDelegate.rightDescription
+        println(appDelegate.description)
+        
+        
+        rightAnswerLabel.adjustsFontSizeToFitWidth = true
+        descriptionLabel.adjustsFontSizeToFitWidth = true
         // Do any additional setup after loading the view.
     }
-
+    
+    func isCorrectAnswer() -> Bool {
+        if appDelegate.answer! == appDelegate.rightAnswer! {
+            return true
+        }
+        return false
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
