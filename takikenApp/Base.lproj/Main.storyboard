@@ -761,7 +761,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Pb-mS-onS">
-                                <rect key="frame" x="46" y="198" width="45" height="74"/>
+                                <rect key="frame" x="36" y="198" width="55" height="74"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -818,6 +818,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="問題解答" id="bAY-mb-uZ2"/>
+                    <connections>
+                        <outlet property="correctCountLabel" destination="5Pb-mS-onS" id="e08-he-luK"/>
+                        <outlet property="problemsCountLabel" destination="Qd6-T2-PBw" id="RnH-gd-98p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3s0-JY-GRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

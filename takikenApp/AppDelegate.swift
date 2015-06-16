@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     var rightAnswer:String?
     var rightDescription:String?
     var answerProblemNumber:Int?
+    var correctCount:Int?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         GMSServices.provideAPIKey("AIzaSyBMtO1fNcnpd8HBam8mpg2wEDAQ_dYinC8")

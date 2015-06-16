@@ -33,9 +33,9 @@ class answerCategoriesViewController: UIViewController, UIPickerViewDelegate,UIT
             appDelegate.problems[i] = json["response"]!["Problems"]!![i]
         }
         
-        // *** 解答する問題番号の初期化 ***
+        // *** 解答する問題通し番号と正解数の初期化 ***
         appDelegate.answerProblemNumber = 0
-        println(appDelegate.answerProblemNumber!)
+        appDelegate.correctCount = 0
         
         // *** 問題情報の値取得 => problems[0]["Problem"]!?["sentence"]! as? String ***
         self.performSegueWithIdentifier("nextAnswer", sender: self)

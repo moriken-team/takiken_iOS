@@ -10,6 +10,9 @@ import UIKit
 
 class answerTotalResultViewController: UIViewController {
 
+    var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    @IBOutlet weak var correctCountLabel: UILabel!
+    @IBOutlet weak var problemsCountLabel: UILabel!
     @IBAction func exit(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
@@ -19,6 +22,9 @@ class answerTotalResultViewController: UIViewController {
         // *** ナビゲーションバーのbackボタンを非表示にする（TODO:ベストな方法に変更） ***
         self.navigationItem.title = ""
         self.navigationItem.setHidesBackButton(true, animated: false)
+        
+        correctCountLabel.text = String(appDelegate.correctCount!)
+        problemsCountLabel.text = String(appDelegate.problems.count)
 
         // Do any additional setup after loading the view.
     }

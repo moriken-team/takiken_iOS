@@ -33,6 +33,7 @@ class answerResultViewController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated: false)
 
         if isCorrectAnswer() {
+            appDelegate.correctCount!++
             resultLabel.text = "正解"
             resultImage.image = UIImage(named: "kusudama.png")
         }else{
