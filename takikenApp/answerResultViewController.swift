@@ -21,11 +21,16 @@ class answerResultViewController: UIViewController {
         appDelegate.answerProblemNumber!++
         if appDelegate.answerProblemNumber < appDelegate.problems.count {
             performSegueWithIdentifier("nextAnswer", sender: nil)
+        }else{
+            appDelegate.answerProblemNumber! = 0
+            performSegueWithIdentifier("totalResult", sender: nil)
         }
-        performSegueWithIdentifier("totalResult", sender: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        // *** ナビゲーションバーのbackボタンを非表示にする（TODO:ベストな方法に変更） ***
+        self.navigationItem.title = ""
+        self.navigationItem.setHidesBackButton(true, animated: false)
 
         if isCorrectAnswer() {
             resultLabel.text = "正解"

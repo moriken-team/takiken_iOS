@@ -30,6 +30,9 @@ class answerSelectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // *** ナビゲーションバーのbackボタンを非表示にする（TODO:ベストな方法に変更） ***
+        self.navigationItem.title = ""
+        self.navigationItem.setHidesBackButton(true, animated: false)
         
         // *** 問題選択肢ランダム処理 ***
         let right_answer = appDelegate.problems[appDelegate.answerProblemNumber!]["Problem"]!!["right_answer"]! as? String

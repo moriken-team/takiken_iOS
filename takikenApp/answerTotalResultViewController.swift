@@ -16,6 +16,9 @@ class answerTotalResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // *** ナビゲーションバーのbackボタンを非表示にする（TODO:ベストな方法に変更） ***
+        self.navigationItem.title = ""
+        self.navigationItem.setHidesBackButton(true, animated: false)
 
         // Do any additional setup after loading the view.
     }

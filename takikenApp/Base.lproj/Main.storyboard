@@ -613,12 +613,12 @@
                         <outlet property="selectAnswer3" destination="j4W-a2-Xkk" id="9dE-2M-iCU"/>
                         <outlet property="selectAnswer4" destination="gR7-rn-Vrb" id="4ci-hR-DPQ"/>
                         <outlet property="sentenceLabel" destination="I2C-gW-bHN" id="hJs-ED-iGT"/>
-                        <segue destination="00O-uO-T0l" kind="show" identifier="result" id="CZr-Ct-aeE"/>
+                        <segue destination="gdY-vl-W1O" kind="show" identifier="result" id="cWG-pz-dfZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xff-6l-h3j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1721.5" y="2805.5"/>
+            <point key="canvasLocation" x="2366.5" y="2787.5"/>
         </scene>
         <!--問題解答-->
         <scene sceneID="pyC-ZS-hzJ">
@@ -706,7 +706,7 @@
                         <outlet property="resultImage" destination="7xN-de-XwW" id="IfT-4z-KZ9"/>
                         <outlet property="resultLabel" destination="3eP-tm-j0f" id="Rj1-EA-I70"/>
                         <outlet property="rightAnswerLabel" destination="QWs-55-BHB" id="DT6-O7-0Xg"/>
-                        <segue destination="szs-LK-Ayj" kind="replace" identifier="nextAnswer" splitViewControllerTargetIndex="1" id="i3I-Su-Stu"/>
+                        <segue destination="szs-LK-Ayj" kind="show" identifier="nextAnswer" id="i3I-Su-Stu"/>
                         <segue destination="paC-E9-G47" kind="show" identifier="totalResult" id="R9U-Vw-eqJ"/>
                     </connections>
                 </viewController>
@@ -1207,24 +1207,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ngr-zp-Pg4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1134.5" y="2805.5"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="1bP-rN-SgV">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="00O-uO-T0l" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fqs-dQ-N2L">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="gdY-vl-W1O" kind="relationship" relationship="rootViewController" id="LWT-ly-7yb"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bRr-iG-nsO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2389.5" y="2804.5"/>
         </scene>
     </scenes>
     <resources>
