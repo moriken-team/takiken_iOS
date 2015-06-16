@@ -550,16 +550,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="book.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qgn-j8-lTb">
                                 <rect key="frame" x="7" y="130" width="358" height="235"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIy-pY-Vzd">
-                                <rect key="frame" x="18" y="357" width="339" height="73"/>
-                                <state key="normal" title="選択肢1" backgroundImage="btn_red.png">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="choice:" destination="3kt-Gj-5tK" eventType="touchUpInside" id="PHh-qW-xkC"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZK-A1-YNL">
                                 <rect key="frame" x="18" y="428" width="339" height="73"/>
                                 <state key="normal" title="選択肢2" backgroundImage="btn_green.png">
@@ -590,12 +580,23 @@
                                     <action selector="choice:" destination="3kt-Gj-5tK" eventType="touchUpInside" id="qIz-NU-i5V"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="問題文" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2C-gW-bHN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="問題文" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2C-gW-bHN">
                                 <rect key="frame" x="45" y="176" width="281" height="149"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="RIy-pY-Vzd">
+                                <rect key="frame" x="18" y="360" width="338" height="73"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="選択肢1" backgroundImage="btn_red.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="choice:" destination="3kt-Gj-5tK" eventType="touchUpInside" id="PHh-qW-xkC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -607,6 +608,11 @@
                     <navigationItem key="navigationItem" title="問題解答" id="yGq-f1-kdY"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="selectAnswer1" destination="RIy-pY-Vzd" id="ZpZ-7l-zYm"/>
+                        <outlet property="selectAnswer2" destination="CZK-A1-YNL" id="ElT-ex-UC6"/>
+                        <outlet property="selectAnswer3" destination="j4W-a2-Xkk" id="9dE-2M-iCU"/>
+                        <outlet property="selectAnswer4" destination="gR7-rn-Vrb" id="4ci-hR-DPQ"/>
+                        <outlet property="sentenceLabel" destination="I2C-gW-bHN" id="hJs-ED-iGT"/>
                         <segue destination="00O-uO-T0l" kind="show" identifier="result" id="CZr-Ct-aeE"/>
                     </connections>
                 </viewController>
@@ -1238,6 +1244,6 @@
         <image name="ひろぽん_Fotor.jpg" width="75" height="76"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uTt-b0-dLq"/>
+        <segue reference="i3I-Su-Stu"/>
     </inferredMetricsTieBreakers>
 </document>
