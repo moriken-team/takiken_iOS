@@ -18,6 +18,10 @@ class answerResultViewController: UIViewController {
     @IBOutlet weak var resultImage: UIImageView!
     
     @IBAction func nextAction(sender: AnyObject) {
+        appDelegate.answerProblemNumber!++
+        if appDelegate.answerProblemNumber < appDelegate.problems.count {
+            performSegueWithIdentifier("nextAnswer", sender: nil)
+        }
         performSegueWithIdentifier("totalResult", sender: nil)
     }
     override func viewDidLoad() {

@@ -32,20 +32,20 @@ class answerSelectionViewController: UIViewController {
         super.viewDidLoad()
         
         // *** 問題選択肢ランダム処理 ***
-        let right_answer = appDelegate.problems[0]["Problem"]!!["right_answer"]! as? String
-        let wrong_answer1 = appDelegate.problems[0]["Problem"]!!["wrong_answer1"]! as? String
-        let wrong_answer2 = appDelegate.problems[0]["Problem"]!!["wrong_answer2"]! as? String
-        let wrong_answer3 = appDelegate.problems[0]["Problem"]!!["wrong_answer3"]! as? String
+        let right_answer = appDelegate.problems[appDelegate.answerProblemNumber!]["Problem"]!!["right_answer"]! as? String
+        let wrong_answer1 = appDelegate.problems[appDelegate.answerProblemNumber!]["Problem"]!!["wrong_answer1"]! as? String
+        let wrong_answer2 = appDelegate.problems[appDelegate.answerProblemNumber!]["Problem"]!!["wrong_answer2"]! as? String
+        let wrong_answer3 = appDelegate.problems[appDelegate.answerProblemNumber!]["Problem"]!!["wrong_answer3"]! as? String
         let defaultAnswers: [String] = [right_answer!, wrong_answer1!, wrong_answer2!, wrong_answer3!]
         let shuffleAnswers = shuffleArray(defaultAnswers)
         //正誤判定用するために正解選択肢の情報を保存
         appDelegate.rightAnswer = defaultAnswers[0]
-        appDelegate.rightDescription = appDelegate.problems[0]["Problem"]!!["description"]! as? String
+        appDelegate.rightDescription = appDelegate.problems[appDelegate.answerProblemNumber!]["Problem"]!!["description"]! as? String
         
         println(defaultAnswers)
         
         // *** ビューに問題情報の表示 ***
-        sentenceLabel.text = appDelegate.problems[0]["Problem"]!!["sentence"] as? String
+        sentenceLabel.text = appDelegate.problems[appDelegate.answerProblemNumber!]["Problem"]!!["sentence"] as? String
         selectAnswer1.setTitle(shuffleAnswers[0], forState: .Normal)
         selectAnswer2.setTitle(shuffleAnswers[1], forState: .Normal)
         selectAnswer3.setTitle(shuffleAnswers[2], forState: .Normal)

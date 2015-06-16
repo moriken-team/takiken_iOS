@@ -706,7 +706,7 @@
                         <outlet property="resultImage" destination="7xN-de-XwW" id="IfT-4z-KZ9"/>
                         <outlet property="resultLabel" destination="3eP-tm-j0f" id="Rj1-EA-I70"/>
                         <outlet property="rightAnswerLabel" destination="QWs-55-BHB" id="DT6-O7-0Xg"/>
-                        <segue destination="szs-LK-Ayj" kind="modal" identifier="nextAnswer" id="i3I-Su-Stu"/>
+                        <segue destination="szs-LK-Ayj" kind="replace" identifier="nextAnswer" splitViewControllerTargetIndex="1" id="i3I-Su-Stu"/>
                         <segue destination="paC-E9-G47" kind="show" identifier="totalResult" id="R9U-Vw-eqJ"/>
                     </connections>
                 </viewController>

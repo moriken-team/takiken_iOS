@@ -26,13 +26,17 @@ class answerCategoriesViewController: UIViewController, UIPickerViewDelegate,UIT
         let request:NSURLRequest = NSURLRequest(URL: requestUrl!)
         let requestData:NSData = NSURLConnection.sendSynchronousRequest(request, returningResponse: nil, error: nil)!
         var json:NSMutableDictionary = NSJSONSerialization.JSONObjectWithData(requestData, options: NSJSONReadingOptions.AllowFragments, error: nil) as! NSMutableDictionary
-        println(json["response"]!["Problems"]!![0]["Problem"]!!["sentence"])
         
         // *** respons内の問題情報を保存 ***
         let problemMax:NSInteger = json["response"]!["Problems"]!!.count
         for var i = 0; i < problemMax; ++i {
             appDelegate.problems[i] = json["response"]!["Problems"]!![i]
         }
+        
+        // *** 解答する問題番号の初期化 ***
+        appDelegate.answerProblemNumber = 0
+        println(appDelegate.answerProblemNumber!)
+        
         // *** 問題情報の値取得 => problems[0]["Problem"]!?["sentence"]! as? String ***
         self.performSegueWithIdentifier("nextAnswer", sender: self)
         
