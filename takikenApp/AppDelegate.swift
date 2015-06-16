@@ -18,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     var gpsLon: Double = 141.136098
     // *** 問題情報を保存する ***
     var problems:NSMutableArray = NSMutableArray()
-    var rightIndex:Int?
+    var answer:String?
+    var rightAnswer:String?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         GMSServices.provideAPIKey("AIzaSyBMtO1fNcnpd8HBam8mpg2wEDAQ_dYinC8")

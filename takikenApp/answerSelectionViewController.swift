@@ -19,6 +19,8 @@ class answerSelectionViewController: UIViewController {
     @IBOutlet weak var selectAnswer4: UIButton!
     
     @IBAction func choice(sender: AnyObject) {
+        //正誤判定用するために選択した選択肢の情報を保存
+        appDelegate.answer = sender.titleLabel!!.text!
         performSegueWithIdentifier("result", sender: nil)
     }
     
@@ -36,13 +38,8 @@ class answerSelectionViewController: UIViewController {
         let wrong_answer3 = appDelegate.problems[0]["Problem"]!!["wrong_answer3"]! as? String
         let defaultAnswers: [String] = [right_answer!, wrong_answer1!, wrong_answer2!, wrong_answer3!]
         let shuffleAnswers = shuffleArray(defaultAnswers)
-        for var i = 0; i < shuffleAnswers.count; i++ {
-            if shuffleAnswers[i] == defaultAnswers[0] {
-                //正誤判定用するために正解選択肢のindexを保存
-                appDelegate.rightIndex = i
-                break
-            }
-        }
+        //正誤判定用するために正解選択肢の情報を保存
+        appDelegate.rightAnswer = defaultAnswers[0]
         
         println(defaultAnswers)
         
