@@ -608,6 +608,7 @@
                     <navigationItem key="navigationItem" title="問題解答" id="yGq-f1-kdY"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="problemNumberLabel" destination="XRV-Au-Z3M" id="n0x-sV-LR2"/>
                         <outlet property="selectAnswer1" destination="RIy-pY-Vzd" id="ZpZ-7l-zYm"/>
                         <outlet property="selectAnswer2" destination="CZK-A1-YNL" id="ElT-ex-UC6"/>
                         <outlet property="selectAnswer3" destination="j4W-a2-Xkk" id="9dE-2M-iCU"/>
@@ -618,7 +619,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xff-6l-h3j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2366.5" y="2787.5"/>
+            <point key="canvasLocation" x="1837.5" y="2805.5"/>
         </scene>
         <!--問題解答-->
         <scene sceneID="pyC-ZS-hzJ">
@@ -712,7 +713,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oFD-c1-h1O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2891.5" y="2803.5"/>
+            <point key="canvasLocation" x="2525.5" y="2805.5"/>
         </scene>
         <!--問題解答-->
         <scene sceneID="Uyy-s3-IfE">
@@ -820,7 +821,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3s0-JY-GRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3424" y="2804"/>
+            <point key="canvasLocation" x="3163.5" y="2805.5"/>
         </scene>
         <!--選択問題-->
         <scene sceneID="lNQ-VI-gcp">
@@ -1230,6 +1231,6 @@
         <image name="ひろぽん_Fotor.jpg" width="75" height="76"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="i3I-Su-Stu"/>
+        <segue reference="AUa-BV-WT4"/>
     </inferredMetricsTieBreakers>
 </document>

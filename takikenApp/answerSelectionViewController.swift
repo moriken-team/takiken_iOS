@@ -17,6 +17,7 @@ class answerSelectionViewController: UIViewController {
     @IBOutlet weak var selectAnswer2: UIButton!
     @IBOutlet weak var selectAnswer3: UIButton!
     @IBOutlet weak var selectAnswer4: UIButton!
+    @IBOutlet weak var problemNumberLabel: UILabel!
     
     @IBAction func choice(sender: AnyObject) {
         //正誤判定用するために選択した選択肢の情報を保存
@@ -48,6 +49,8 @@ class answerSelectionViewController: UIViewController {
         println(defaultAnswers)
         
         // *** ビューに問題情報の表示 ***
+        //問題通し番号は初期値が0なので常に+1する
+        problemNumberLabel.text = "第\(String(appDelegate.answerProblemNumber! + 1))問"
         sentenceLabel.text = appDelegate.problems[appDelegate.answerProblemNumber!]["Problem"]!!["sentence"] as? String
         selectAnswer1.setTitle(shuffleAnswers[0], forState: .Normal)
         selectAnswer2.setTitle(shuffleAnswers[1], forState: .Normal)
