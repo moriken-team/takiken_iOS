@@ -34,6 +34,7 @@ class answerCategoriesViewController: UIViewController, UIPickerViewDelegate,UIT
             appDelegate.problems[i] = json["response"]!["Problems"]!![i]
         }
         // *** 問題情報の値取得 => problems[0]["Problem"]!?["sentence"]! as? String ***
+        self.performSegueWithIdentifier("nextAnswer", sender: self)
         
         // ***　非同期処理の場合は以下↓ ***
         //let config:NSURLSessionConfiguration = NSURLSessionConfiguration.defaultSessionConfiguration()
