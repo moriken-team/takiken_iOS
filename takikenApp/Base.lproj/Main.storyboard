@@ -785,7 +785,7 @@
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="szs-LK-Ayj" kind="push" identifier="nextAnswer" id="AUa-BV-WT4"/>
+                                    <action selector="moreAnswer:" destination="paC-E9-G47" eventType="touchUpInside" id="67R-XC-OLo"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="結果発表" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTn-QM-B0S">
@@ -821,11 +821,12 @@
                     <connections>
                         <outlet property="correctCountLabel" destination="5Pb-mS-onS" id="e08-he-luK"/>
                         <outlet property="problemsCountLabel" destination="Qd6-T2-PBw" id="RnH-gd-98p"/>
+                        <segue destination="3kt-Gj-5tK" kind="push" identifier="nextAnswer" id="mV9-9P-alL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3s0-JY-GRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3163.5" y="2805.5"/>
+            <point key="canvasLocation" x="3044.5" y="2813.5"/>
         </scene>
         <!--選択問題-->
         <scene sceneID="lNQ-VI-gcp">
@@ -1235,6 +1236,7 @@
         <image name="ひろぽん_Fotor.jpg" width="75" height="76"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AUa-BV-WT4"/>
+        <segue reference="mV9-9P-alL"/>
+        <segue reference="i3I-Su-Stu"/>
     </inferredMetricsTieBreakers>
 </document>

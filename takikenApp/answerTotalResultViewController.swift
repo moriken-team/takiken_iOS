@@ -11,8 +11,15 @@ import UIKit
 class answerTotalResultViewController: UIViewController {
 
     var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    var _problemModel: problemModel = problemModel()
     @IBOutlet weak var correctCountLabel: UILabel!
     @IBOutlet weak var problemsCountLabel: UILabel!
+    
+    @IBAction func moreAnswer(sender: AnyObject) {
+        _problemModel.setUpAnswer()
+        performSegueWithIdentifier("nextAnswer", sender: nil)
+    }
+    
     @IBAction func exit(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
