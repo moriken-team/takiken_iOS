@@ -468,8 +468,25 @@
                                 <color key="textColor" red="0.99747307546608088" green="1" blue="0.97369215385399421" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="練習問題！" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hw-av-q4u">
+                                <rect key="frame" x="104" y="115" width="181" height="58"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dcl-GI-ZTN">
+                                <rect key="frame" x="69" y="391" width="250" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="カテゴリを選択▼" backgroundImage="btn057_01.png">
+                                    <color key="titleColor" red="0.17452566959999999" green="0.17452566959999999" blue="0.17452566959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectCategory:" destination="XGN-uS-RdM" eventType="touchUpInside" id="u5n-cd-ye8"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THm-if-EAI">
-                                <rect key="frame" x="69" y="482" width="250" height="58"/>
+                                <rect key="frame" x="69" y="484" width="250" height="58"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="問題にチャレンジ！" backgroundImage="btn057_03.png">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -479,18 +496,6 @@
                                     <action selector="challengeProbem:" destination="XGN-uS-RdM" eventType="touchUpInside" id="Zt6-L0-KgA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="練習問題！" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hw-av-q4u">
-                                <rect key="frame" x="104" y="115" width="181" height="58"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="選択カテゴリー：" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XsN-9r-hzi">
-                                <rect key="frame" x="36" y="382" width="176" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -506,6 +511,7 @@
                     </tabBarItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="selectCategoryButton" destination="Dcl-GI-ZTN" id="8XD-2b-JdK"/>
                         <segue destination="szs-LK-Ayj" kind="modal" identifier="nextAnswer" id="uTt-b0-dLq"/>
                     </connections>
                 </viewController>
@@ -583,7 +589,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="問題文" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2C-gW-bHN">
                                 <rect key="frame" x="45" y="176" width="281" height="149"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="RIy-pY-Vzd">
@@ -1217,6 +1223,7 @@
     </scenes>
     <resources>
         <image name="book.png" width="800" height="700"/>
+        <image name="btn057_01.png" width="180" height="30"/>
         <image name="btn057_03.png" width="180" height="30"/>
         <image name="btn_blue.png" width="180" height="42"/>
         <image name="btn_green.png" width="180" height="42"/>
@@ -1236,7 +1243,7 @@
         <image name="ひろぽん_Fotor.jpg" width="75" height="76"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="uTt-b0-dLq"/>
         <segue reference="mV9-9P-alL"/>
-        <segue reference="i3I-Su-Stu"/>
     </inferredMetricsTieBreakers>
 </document>

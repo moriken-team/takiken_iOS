@@ -8,13 +8,18 @@
 
 import UIKit
 
-class answerCategoriesViewController: UIViewController, UIPickerViewDelegate,UIToolbarDelegate,NSURLSessionDelegate,NSURLSessionDataDelegate {
+class answerCategoriesViewController: UIViewController, UIPickerViewDelegate,UIToolbarDelegate,NSURLSessionDelegate,NSURLSessionDataDelegate, PopUpPickerViewDelegate {
     
     let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     var category = ["滝沢のなりたち・概要","自然", "施設", "神社・仏閣", "伝統・文化", "都市整備", "交通", "人物", "イベント", "産業", "生涯学習", "メディア"]
     let _problemModel: problemModel = problemModel()
-    var toolBar: UIToolbar!
-    var textField: UITextField!
+    var picker: PopUpPickerView! = PopUpPickerView()
+    
+    @IBOutlet weak var selectCategoryButton: UIButton!
+    
+    @IBAction func selectCategory(sender: AnyObject) {
+        picker.showPicker()
+    }
     
     @IBAction func menuShowOnTap(sender: AnyObject) {
         appDelegate.slidingViewController?.anchorTopViewToRightAnimated(true)
@@ -28,43 +33,9 @@ class answerCategoriesViewController: UIViewController, UIPickerViewDelegate,UIT
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        //スクリーンの幅
-        let screenWidth = UIScreen.mainScreen().bounds.size.width;
-        //スクリーンの高さ
-        let screenHeight = UIScreen.mainScreen().bounds.size.height;
-        //CGRectで取得
-        let myImage = UIImage(named: "kokuban.jpg")!
-        var myImageView = UIImageView()
-        myImageView.image = myImage
-        myImageView.frame = CGRectMake(0, 64, screenWidth, screenHeight - 109)
-        //self.view.addSubview(myImageView)
-        
-        //textField = UITextField(frame: CGRectMake(self.view.frame.size.width/3, 200, 0, 0))
-        textField = UITextField(frame: CGRectMake(210, 392, 100, 0))
-        textField.placeholder = "未選択"
-        textField.sizeToFit()
-        textField.textColor = UIColor.whiteColor()
-        textField.font = UIFont.systemFontOfSize(22)
-        self.view.addSubview(textField)
-        
-        var pickerView = UIPickerView()
-        pickerView.showsSelectionIndicator = true
-        pickerView.delegate = self
-        
-        textField.inputView = pickerView
-        
-        toolBar = UIToolbar(frame: CGRectMake(0, self.view.frame.size.height/6, self.view.frame.size.width, 40.0))
-        toolBar.layer.position = CGPoint(x: self.view.frame.size.width/2, y: self.view.frame.size.height-20.0)
-        toolBar.barStyle = .BlackTranslucent
-        toolBar.tintColor = UIColor.whiteColor()
-        toolBar.backgroundColor = UIColor.blackColor()
-        
-        let toolBarBtn = UIBarButtonItem(title: "完了", style: .Done, target: self, action: "tappedToolBarBtn:")
-        toolBarBtn.tag = 1
-        toolBar.items = [toolBarBtn]
-        
-        textField.inputAccessoryView = toolBar
+        // *** PopUpPickerViewを利用するためのデリゲートの設定とaddSubview ***
+        picker.delegate = self
+        self.view.addSubview(picker)
         
     }
     
@@ -78,13 +49,9 @@ class answerCategoriesViewController: UIViewController, UIPickerViewDelegate,UIT
         return category[row]
     }
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        textField.text = category[row]
-        textField.sizeToFit()
+        selectCategoryButton.setTitle("\(category[row])▼", forState: .Normal)
+        selectCategoryButton.titleLabel?.adjustsFontSizeToFitWidth = true
     }
-    func tappedToolBarBtn(sender: UIBarButtonItem) {
-        textField.resignFirstResponder()
-    }
-    
     
     override func viewWillAppear(animated: Bool) {
         self.view.addGestureRecognizer(appDelegate.slidingViewController!.panGesture)
