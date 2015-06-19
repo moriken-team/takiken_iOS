@@ -18,7 +18,7 @@ class problemModel {
     }
     
     func setUpAnswer() {
-        let params:String = "kentei_id=1&employ=2012&grade=3&category_id=1&item=5"
+        let params:String = "kentei_id=1&employ=2012&grade=3&public_flag=1&category_id=1&item=5"
         let apiResponse = self.index(params)
         // *** 解答する問題通し番号・正解数・問題データの初期化 ***
         _appDelegate.answerProblemNumber = 0
