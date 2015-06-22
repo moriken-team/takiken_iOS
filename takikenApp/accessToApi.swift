@@ -8,7 +8,7 @@
 
 import Foundation
 
-class getApis {
+class accessToApi {
     
     var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     let urlBase = "http://sakumon.jp/app/LK_API"

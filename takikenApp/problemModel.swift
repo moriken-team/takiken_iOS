@@ -10,7 +10,7 @@ import Foundation
 
 class problemModel {
     
-    let _api = getApis()
+    let _api = accessToApi()
     let _appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     func index(params: String) -> NSMutableDictionary {
