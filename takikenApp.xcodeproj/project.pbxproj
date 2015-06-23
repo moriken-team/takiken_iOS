@@ -96,7 +96,8 @@
 		87CCBACB1B1F85C2008B7708 /* gal.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CCBACA1B1F85C2008B7708 /* gal.png */; };
 		87CCBACD1B1F871A008B7708 /* answerResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CCBACC1B1F871A008B7708 /* answerResultViewController.swift */; };
 		87CCBACF1B1F872D008B7708 /* answerTotalResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CCBACE1B1F872D008B7708 /* answerTotalResultViewController.swift */; };
-		87ECECA51B3077C7001C60F2 /* getApis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ECECA41B3077C7001C60F2 /* getApis.swift */; };
+		87DDA2811B38040200DFD0BE /* spotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DDA2801B38040200DFD0BE /* spotModel.swift */; };
+		87ECECA51B3077C7001C60F2 /* accessToApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ECECA41B3077C7001C60F2 /* accessToApi.swift */; };
 		87ECECA71B312077001C60F2 /* problemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ECECA61B312076001C60F2 /* problemModel.swift */; };
 		87F002891AA8015500C60145 /* ひろぽん_Fotor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 87F002881AA8015500C60145 /* ひろぽん_Fotor.jpg */; };
 		87F61FF41A8F3D2700607F94 /* menuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F61FF31A8F3D2700607F94 /* menuTableViewController.swift */; };
@@ -196,7 +197,8 @@
 		87CCBACA1B1F85C2008B7708 /* gal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gal.png; sourceTree = "<group>"; };
 		87CCBACC1B1F871A008B7708 /* answerResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = answerResultViewController.swift; sourceTree = "<group>"; };
 		87CCBACE1B1F872D008B7708 /* answerTotalResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = answerTotalResultViewController.swift; sourceTree = "<group>"; };
-		87ECECA41B3077C7001C60F2 /* getApis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getApis.swift; sourceTree = "<group>"; };
+		87DDA2801B38040200DFD0BE /* spotModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = spotModel.swift; sourceTree = "<group>"; };
+		87ECECA41B3077C7001C60F2 /* accessToApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = accessToApi.swift; sourceTree = "<group>"; };
 		87ECECA61B312076001C60F2 /* problemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = problemModel.swift; sourceTree = "<group>"; };
 		87F002881AA8015500C60145 /* ひろぽん_Fotor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ひろぽん_Fotor.jpg"; sourceTree = "<group>"; };
 		87F61FF31A8F3D2700607F94 /* menuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuTableViewController.swift; sourceTree = "<group>"; };
@@ -318,8 +320,9 @@
 				87CCBAB01B1F7663008B7708 /* answerSelectionViewController.swift */,
 				87CCBACC1B1F871A008B7708 /* answerResultViewController.swift */,
 				87CCBACE1B1F872D008B7708 /* answerTotalResultViewController.swift */,
-				87ECECA41B3077C7001C60F2 /* getApis.swift */,
+				87ECECA41B3077C7001C60F2 /* accessToApi.swift */,
 				87ECECA61B312076001C60F2 /* problemModel.swift */,
+				87DDA2801B38040200DFD0BE /* spotModel.swift */,
 			);
 			path = takikenApp;
 			sourceTree = "<group>";
@@ -623,6 +626,7 @@
 				872AC3E21AA386B50052393C /* RAMItemAnimationProtocol.swift in Sources */,
 				87401E711AA7D225006D46B5 /* createSpotProblemViewController.swift in Sources */,
 				87F61FF41A8F3D2700607F94 /* menuTableViewController.swift in Sources */,
+				87DDA2811B38040200DFD0BE /* spotModel.swift in Sources */,
 				87CCBAB11B1F7663008B7708 /* answerSelectionViewController.swift in Sources */,
 				872AC3E11AA386B50052393C /* RAMAnimatedTabBarController.swift in Sources */,
 				872AC3EE1AA388A50052393C /* RAMBounceAnimation.swift in Sources */,
@@ -642,7 +646,7 @@
 				87FB72DD1AA324CD007A461D /* mapTopViewController.swift in Sources */,
 				872AC3FE1AA5CC650052393C /* rankingViewController.swift in Sources */,
 				872AC3F11AA388A50052393C /* RAMRotationAnimation.swift in Sources */,
-				87ECECA51B3077C7001C60F2 /* getApis.swift in Sources */,
+				87ECECA51B3077C7001C60F2 /* accessToApi.swift in Sources */,
 				872AC3FC1AA5C6000052393C /* profileViewController.swift in Sources */,
 				872AC40C1AA5FA980052393C /* selectionProblemCreateViewController.swift in Sources */,
 			);
