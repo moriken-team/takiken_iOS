@@ -16,7 +16,16 @@ class answerTotalResultViewController: UIViewController {
     @IBOutlet weak var problemsCountLabel: UILabel!
     
     @IBAction func moreAnswer(sender: AnyObject) {
-        _problemModel.setUpAnswer()
+        var params: String?
+        switch appDelegate.answerProblemType! {
+        case "random":
+            params = "kentei_id=1&public_flag=1&item=5"
+        case "category":
+            params = "kentei_id=1&employ=2012&grade=3&public_flag=1&category_id=1&item=5"
+        default:
+            break
+        }
+        _problemModel.setUpAnswer(params!)
         performSegueWithIdentifier("nextAnswer", sender: nil)
     }
     

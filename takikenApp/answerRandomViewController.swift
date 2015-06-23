@@ -15,6 +15,8 @@ class answerRandomViewController: UIViewController {
 
     @IBAction func challengeProbem(sender: AnyObject) {
         let params:String = "kentei_id=1&public_flag=1&item=5"
+        // *** リザルト画面で問題を再取得するため，ランダム問題が対象であることを保存 ***
+        _appDelegate.answerProblemType = "random"
         _problemModel.setUpAnswer(params)
         performSegueWithIdentifier("nextAnswer", sender: self)
     }

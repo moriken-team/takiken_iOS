@@ -26,7 +26,10 @@ class answerCategoriesViewController: UIViewController, UIPickerViewDelegate,UIT
     }
     
     @IBAction func challengeProbem(sender: AnyObject) {
-        _problemModel.setUpAnswer()
+        let params:String = "kentei_id=1&employ=2012&grade=3&public_flag=1&category_id=1&item=5"
+        // *** リザルト画面で問題を再取得するため，カテゴリ指定問題が対象であることを保存 ***
+        appDelegate.answerProblemType = "category"
+        _problemModel.setUpAnswer(params)
         self.performSegueWithIdentifier("nextAnswer", sender: self)
     }
     
