@@ -364,7 +364,7 @@
                                     <navigationItem title="問題解答" id="lal-b9-XYv">
                                         <barButtonItem key="leftBarButtonItem" title="menu" id="qs1-ea-Xfp">
                                             <connections>
-                                                <action selector="menuShowOnTap:" destination="0MK-5E-C5e" id="y6o-cV-KQa"/>
+                                                <action selector="showSideMenu:" destination="0MK-5E-C5e" id="IQQ-2K-Ntg"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
