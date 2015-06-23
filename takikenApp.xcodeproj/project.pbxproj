@@ -38,7 +38,6 @@
 		872AC3FE1AA5CC650052393C /* rankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872AC3FD1AA5CC650052393C /* rankingViewController.swift */; };
 		872AC4021AA5CE670052393C /* userSnsManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872AC4011AA5CE670052393C /* userSnsManagerViewController.swift */; };
 		872AC4061AA5DF0A0052393C /* answerCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872AC4051AA5DF0A0052393C /* answerCategoriesViewController.swift */; };
-		872AC4081AA5DF280052393C /* hundredQuestionAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872AC4071AA5DF280052393C /* hundredQuestionAnswerViewController.swift */; };
 		872AC40A1AA5FA790052393C /* questionsAndAnswersCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872AC4091AA5FA790052393C /* questionsAndAnswersCreateViewController.swift */; };
 		872AC40C1AA5FA980052393C /* selectionProblemCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872AC40B1AA5FA980052393C /* selectionProblemCreateViewController.swift */; };
 		872AC40E1AA605600052393C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 872AC40D1AA605600052393C /* CoreLocation.framework */; };
@@ -83,6 +82,7 @@
 		87671AC21AA7E2A80046E9A2 /* bunbougu_memo.png in Resources */ = {isa = PBXBuildFile; fileRef = 87671AC11AA7E2A80046E9A2 /* bunbougu_memo.png */; };
 		87671AC41AA7E3600046E9A2 /* pose_ganbarou_man.png in Resources */ = {isa = PBXBuildFile; fileRef = 87671AC31AA7E3600046E9A2 /* pose_ganbarou_man.png */; };
 		87671AC61AA7E8AE0046E9A2 /* machidukuri_building.png in Resources */ = {isa = PBXBuildFile; fileRef = 87671AC51AA7E8AE0046E9A2 /* machidukuri_building.png */; };
+		87BB81291B395BCF00FFD34C /* answerRandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BB81281B395BCF00FFD34C /* answerRandomViewController.swift */; };
 		87CCBAB11B1F7663008B7708 /* answerSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87CCBAB01B1F7663008B7708 /* answerSelectionViewController.swift */; };
 		87CCBAB31B1F78A3008B7708 /* book.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CCBAB21B1F78A3008B7708 /* book.png */; };
 		87CCBAB81B1F79DC008B7708 /* btn_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 87CCBAB41B1F79DC008B7708 /* btn_red.png */; };
@@ -151,7 +151,6 @@
 		872AC3FD1AA5CC650052393C /* rankingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = rankingViewController.swift; path = Animations/rankingViewController.swift; sourceTree = "<group>"; };
 		872AC4011AA5CE670052393C /* userSnsManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userSnsManagerViewController.swift; sourceTree = "<group>"; };
 		872AC4051AA5DF0A0052393C /* answerCategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = answerCategoriesViewController.swift; sourceTree = "<group>"; };
-		872AC4071AA5DF280052393C /* hundredQuestionAnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hundredQuestionAnswerViewController.swift; sourceTree = "<group>"; };
 		872AC4091AA5FA790052393C /* questionsAndAnswersCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = questionsAndAnswersCreateViewController.swift; sourceTree = "<group>"; };
 		872AC40B1AA5FA980052393C /* selectionProblemCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = selectionProblemCreateViewController.swift; sourceTree = "<group>"; };
 		872AC40D1AA605600052393C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -184,6 +183,7 @@
 		87671AC31AA7E3600046E9A2 /* pose_ganbarou_man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pose_ganbarou_man.png; sourceTree = "<group>"; };
 		87671AC51AA7E8AE0046E9A2 /* machidukuri_building.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = machidukuri_building.png; sourceTree = "<group>"; };
 		876860851A8F41C6001DF304 /* takikenApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "takikenApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		87BB81281B395BCF00FFD34C /* answerRandomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = answerRandomViewController.swift; sourceTree = "<group>"; };
 		87CCBAB01B1F7663008B7708 /* answerSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = answerSelectionViewController.swift; sourceTree = "<group>"; };
 		87CCBAB21B1F78A3008B7708 /* book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = book.png; sourceTree = "<group>"; };
 		87CCBAB41B1F79DC008B7708 /* btn_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_red.png; sourceTree = "<group>"; };
@@ -311,7 +311,7 @@
 				872AC3FD1AA5CC650052393C /* rankingViewController.swift */,
 				872AC4011AA5CE670052393C /* userSnsManagerViewController.swift */,
 				872AC4051AA5DF0A0052393C /* answerCategoriesViewController.swift */,
-				872AC4071AA5DF280052393C /* hundredQuestionAnswerViewController.swift */,
+				87BB81281B395BCF00FFD34C /* answerRandomViewController.swift */,
 				872AC4091AA5FA790052393C /* questionsAndAnswersCreateViewController.swift */,
 				872AC40B1AA5FA980052393C /* selectionProblemCreateViewController.swift */,
 				87FB72DC1AA324CD007A461D /* mapTopViewController.swift */,
@@ -622,6 +622,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87BB81291B395BCF00FFD34C /* answerRandomViewController.swift in Sources */,
 				87401E6F1AA7D216006D46B5 /* showSpotProblemViewController.swift in Sources */,
 				872AC3E21AA386B50052393C /* RAMItemAnimationProtocol.swift in Sources */,
 				87401E711AA7D225006D46B5 /* createSpotProblemViewController.swift in Sources */,
@@ -634,7 +635,6 @@
 				872081281A8F2FDD0081EE80 /* ViewController.swift in Sources */,
 				872AC3F01AA388A50052393C /* RAMFumeAnimation.swift in Sources */,
 				872AC3F21AA388A50052393C /* RAMTransitionItemAnimation.swift in Sources */,
-				872AC4081AA5DF280052393C /* hundredQuestionAnswerViewController.swift in Sources */,
 				87CCBACD1B1F871A008B7708 /* answerResultViewController.swift in Sources */,
 				872AC4021AA5CE670052393C /* userSnsManagerViewController.swift in Sources */,
 				872AC4061AA5DF0A0052393C /* answerCategoriesViewController.swift in Sources */,

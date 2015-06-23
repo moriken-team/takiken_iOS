@@ -349,7 +349,7 @@
         <!--ランダム-->
         <scene sceneID="Qxt-2F-ZbH">
             <objects>
-                <viewController id="0MK-5E-C5e" customClass="hundredQuestionAnswerViewController" customModule="takikenApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0MK-5E-C5e" customClass="answerRandomViewController" customModule="takikenApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e95-DO-kSW"/>
                         <viewControllerLayoutGuide type="bottom" id="wGK-pv-mTX"/>
