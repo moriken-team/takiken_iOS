@@ -403,6 +403,9 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="challengeProbem:" destination="0MK-5E-C5e" eventType="touchUpInside" id="WUr-sC-yAk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -418,6 +421,9 @@
                         </connections>
                     </tabBarItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="szs-LK-Ayj" kind="modal" identifier="nextAnswer" id="PoF-La-VNV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1CB-PJ-S6d" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="T1N-vp-C4N" customClass="RAMFlipTopTransitionItemAniamtions" customModule="takikenApp" customModuleProvider="target"/>
@@ -1243,7 +1249,7 @@
         <image name="ひろぽん_Fotor.jpg" width="75" height="76"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uTt-b0-dLq"/>
+        <segue reference="PoF-La-VNV"/>
         <segue reference="mV9-9P-alL"/>
     </inferredMetricsTieBreakers>
 </document>
