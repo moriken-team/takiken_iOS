@@ -37,4 +37,21 @@ class accessToApi {
         //})
         //requestTask.resume()
     }
+    
+    func add(resource:String, params:String) -> NSMutableDictionary {
+        // *** 同期処理 ***
+        let postParams = params.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
+        let requestUrl = NSURL(string: "\(urlBase)/\(resource)/add.json")
+        println(requestUrl)
+        let request:NSMutableURLRequest = NSMutableURLRequest(URL: requestUrl!)
+        // POSTで送信
+        request.HTTPMethod = "POST"
+        request.HTTPBody = postParams
+        
+        let requestData:NSData = NSURLConnection.sendSynchronousRequest(request, returningResponse: nil, error: nil)!
+        var json:NSMutableDictionary = NSJSONSerialization.JSONObjectWithData(requestData, options: NSJSONReadingOptions.AllowFragments, error: nil) as! NSMutableDictionary
+        
+        println(json)
+        return json
+    }
 }
