@@ -17,6 +17,7 @@ class questionsAndAnswersCreateViewController: UIViewController {
     var _answer = UITextView(frame: CGRectMake(30, 450, 310, 100))
     // *** 解説文textview ***
     var _description = UITextView(frame: CGRectMake(30, 600, 310, 200))
+    let _problemModel: problemModel = problemModel()
     
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBAction func menuShowOnTap(sender: AnyObject) {
@@ -122,7 +123,7 @@ class questionsAndAnswersCreateViewController: UIViewController {
         post_button.setTitleColor(UIColor.blackColor(), forState: .Normal)
         post_button.titleLabel?.font = UIFont.systemFontOfSize(22)
         //ボタンをタップした時に実行するメソッドを指定
-//        button.addTarget(self, action: "tapped:", forControlEvents:.TouchUpInside)
+        post_button.addTarget(self, action: "postProblem:", forControlEvents:.TouchUpInside)
 
         // *** scrollVIewへのaddSubview ***
         scrollView.addSubview(title)
@@ -144,6 +145,17 @@ class questionsAndAnswersCreateViewController: UIViewController {
         _sentence.resignFirstResponder()
         _answer.resignFirstResponder()
         _description.resignFirstResponder()
+    }
+    
+    // *** 問題投稿APIの実行 ***
+    func postProblem(sender: UIButton) {
+        var params: Array<String> = []
+        params.append("sentence=" + _sentence.text)
+        params.append("right_answer=" + _answer.text)
+        params.append("description=" + _description.text)
+        params.append("category_id=5")
+        params.append("type=2")
+        var response = _problemModel.insertCreateProblem(params)
     }
     
     override func viewWillAppear(animated: Bool) {

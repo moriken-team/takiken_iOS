@@ -17,6 +17,10 @@ class problemModel {
         return _api.index("Problems", param: params)
     }
     
+    func add(params:String) -> NSMutableDictionary {
+        return _api.add("Problems", params: params)
+    }
+    
     func setUpAnswer(params: String) {
         let apiResponse = self.index(params)
         // *** 解答する問題通し番号・正解数・問題データの初期化 ***
@@ -30,4 +34,12 @@ class problemModel {
             _appDelegate.problems[i] = apiResponse["response"]!["Problems"]!![i]
         }
     }
+    
+    func insertCreateProblem(inputParams: Array<String>) -> NSMutableDictionary {
+        var defaultParams = "kentei_id=1&user_id=1&public_flag=0&"
+        let postParams = defaultParams + join("&", inputParams)
+        var response: NSMutableDictionary = self.add(postParams)
+        return response
+    }
+    
 }
