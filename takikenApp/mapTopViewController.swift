@@ -61,13 +61,13 @@ class mapTopViewController: UIViewController, GMSMapViewDelegate, CLLocationMana
         googleMap = GMSMapView(frame: CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height))
         googleMap.camera = initCamera
         googleMap.delegate = self
+        self.view.addSubview(googleMap)
         let spotsMax = spots.count
         for var i = 0; i < spotsMax; i++ {
             let lat: CLLocationDegrees = (spots[i]["latitude"] as! NSString).doubleValue
             let lon: CLLocationDegrees = (spots[i]["longitude"] as! NSString).doubleValue
             let camera: GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(lat,longitude: lon,zoom: zoom);
             let marker: GMSMarker = GMSMarker()
-            self.view.addSubview(googleMap)
             marker.position = camera.target
             marker.title = spots[i]["name"] as! String
             marker.snippet = "→詳細を見る←"
