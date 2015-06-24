@@ -23,6 +23,7 @@ class selectionProblemCreateViewController: UIViewController {
     var _wrong3 = UITextView(frame: CGRectMake(30, 800, 310, 70))
     // *** 解説文textview ***
     var _description = UITextView(frame: CGRectMake(30, 925, 310, 200))
+    let _problemModel: problemModel = problemModel()
     
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBAction func menuShowOnTap(sender: AnyObject) {
@@ -152,7 +153,7 @@ class selectionProblemCreateViewController: UIViewController {
         post_button.setTitleColor(UIColor.blackColor(), forState: .Normal)
         post_button.titleLabel?.font = UIFont.systemFontOfSize(22)
         //ボタンをタップした時に実行するメソッドを指定
-        //        button.addTarget(self, action: "tapped:", forControlEvents:.TouchUpInside)
+        post_button.addTarget(self, action: "postProblem:", forControlEvents:.TouchUpInside)
         
         // *** scrollVIewへのaddSubview ***
         scrollView.addSubview(title)
@@ -182,6 +183,19 @@ class selectionProblemCreateViewController: UIViewController {
         _wrong2.resignFirstResponder()
         _wrong3.resignFirstResponder()
         _description.resignFirstResponder()
+    }
+    
+    func postProblem(sender: UIButton) {
+        var params: Array<String> = []
+        params.append("sentence=" + _sentence.text)
+        params.append("right_answer=" + _answer.text)
+        params.append("wrong_answer1=" + _wrong1.text)
+        params.append("wrong_answer2=" + _wrong2.text)
+        params.append("wrong_answer3=" + _wrong3.text)
+        params.append("description=" + _description.text)
+        params.append("category_id=5")
+        params.append("type=1")
+        var response = _problemModel.insertCreateProblem(params)
     }
     
     override func viewWillAppear(animated: Bool) {
