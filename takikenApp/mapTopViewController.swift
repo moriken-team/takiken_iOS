@@ -54,8 +54,9 @@ class mapTopViewController: UIViewController, GMSMapViewDelegate, CLLocationMana
         let spots = spotApi.fetchSpots()
         
         /*** GoogleMapへのスポット表示処理 start ***/
-        let initLat: CLLocationDegrees = appDelegate.gpsLat
-        let initLon: CLLocationDegrees = appDelegate.gpsLon
+        // 地図カメラの初期位置を滝沢市役所に設定
+        let initLat: CLLocationDegrees = 39.734693
+        let initLon: CLLocationDegrees = 141.077097
         let zoom: Float = 15
         let initCamera: GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(initLat,longitude: initLon,zoom: zoom);
         googleMap = GMSMapView(frame: CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height))
