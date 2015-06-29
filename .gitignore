@@ -3,6 +3,7 @@
 !*.xcworkspace/contents.xcworkspacedata
 animated-tab-bar/*
 xcuserdata
+takikenApp.xcworkspace/xcshareddata/
 
 #CocoaPod
 Pods/*
