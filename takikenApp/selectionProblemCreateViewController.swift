@@ -56,21 +56,21 @@ class selectionProblemCreateViewController: UIViewController {
         toolBar.items = [toolBarBtn]
         
         // *** scrollViewの設定 ***
-        var scrollView = UIScrollView()
+        let scrollView = UIScrollView()
         scrollView.frame =
             CGRectMake(origin.x, origin.y, imagePosition.width, imagePosition.height)
         scrollView.contentSize = CGSizeMake(imagePosition.width, 1250)
         self.view.addSubview(scrollView)
         
         // *** タイトルラベル ***
-        var title = UILabel(frame: CGRectMake(55, 40, 200, 50))
+        let title = UILabel(frame: CGRectMake(55, 40, 200, 50))
         title.text = "4択問題を作ろう！"
         title.textColor = UIColor.whiteColor()
         title.font = UIFont.systemFontOfSize(33)
         title.sizeToFit()
         
         // *** 機能説明ラベル ***
-        var explanation = UILabel(frame: CGRectMake(26, 90, 270, 60))
+        let explanation = UILabel(frame: CGRectMake(26, 90, 270, 60))
         explanation.text = "問題を作りながら滝沢市について勉強してみましょう"
         explanation.textColor = UIColor.whiteColor()
         explanation.font = UIFont.systemFontOfSize(22)
@@ -80,52 +80,52 @@ class selectionProblemCreateViewController: UIViewController {
         explanation.numberOfLines = 0;
         
         // *** 形式通知ラベル ***
-        var notice = UILabel(frame: CGRectMake(45, 150, 330, 60))
+        let notice = UILabel(frame: CGRectMake(45, 150, 330, 60))
         notice.text = "4択形式の問題を考えましょう"
         notice.textColor = UIColor.redColor()
         notice.font = UIFont.systemFontOfSize(21)
         
         // *** アイコン画像 ***
-        var icon = UIImageView(image: UIImage(named: "bunbougu_memo.png"))
+        let icon = UIImageView(image: UIImage(named: "bunbougu_memo.png"))
         icon.frame = CGRectMake(290, 80, 70, 80)
         
         // *** 問題文ラベル ***
-        var sentence_label = UILabel(frame: CGRectMake(30, 220, 100, 50))
+        let sentence_label = UILabel(frame: CGRectMake(30, 220, 100, 50))
         sentence_label.text = "問題文"
         sentence_label.textColor = UIColor.whiteColor()
         sentence_label.font = UIFont.systemFontOfSize(22)
         sentence_label.sizeToFit()
         
         // *** 答えラベル ***
-        var answer_label = UILabel(frame: CGRectMake(30, 420, 100, 50))
+        let answer_label = UILabel(frame: CGRectMake(30, 420, 100, 50))
         answer_label.text = "答え"
         answer_label.textColor = UIColor.whiteColor()
         answer_label.font = UIFont.systemFontOfSize(22)
         answer_label.sizeToFit()
         
         // *** 誤答選択肢1ラベル ***
-        var wrong1_label = UILabel(frame: CGRectMake(30, 532, 100, 50))
+        let wrong1_label = UILabel(frame: CGRectMake(30, 532, 100, 50))
         wrong1_label.text = "誤答選択肢1"
         wrong1_label.textColor = UIColor.whiteColor()
         wrong1_label.font = UIFont.systemFontOfSize(22)
         wrong1_label.sizeToFit()
         
         // *** 誤答選択肢2ラベル ***
-        var wrong2_label = UILabel(frame: CGRectMake(30, 655, 100, 50))
+        let wrong2_label = UILabel(frame: CGRectMake(30, 655, 100, 50))
         wrong2_label.text = "誤答選択肢2"
         wrong2_label.textColor = UIColor.whiteColor()
         wrong2_label.font = UIFont.systemFontOfSize(22)
         wrong2_label.sizeToFit()
         
         // *** 誤答選択肢3ラベル ***
-        var wrong3_label = UILabel(frame: CGRectMake(30, 770, 100, 50))
+        let wrong3_label = UILabel(frame: CGRectMake(30, 770, 100, 50))
         wrong3_label.text = "誤答選択肢3"
         wrong3_label.textColor = UIColor.whiteColor()
         wrong3_label.font = UIFont.systemFontOfSize(22)
         wrong3_label.sizeToFit()
         
         // *** 解説文ラベル ***
-        var description_label = UILabel(frame: CGRectMake(30, 890, 100, 50))
+        let description_label = UILabel(frame: CGRectMake(30, 890, 100, 50))
         description_label.text = "解説文"
         description_label.textColor = UIColor.whiteColor()
         description_label.font = UIFont.systemFontOfSize(22)
@@ -140,13 +140,13 @@ class selectionProblemCreateViewController: UIViewController {
         _description.inputAccessoryView = toolBar
         
         // *** 投稿ボタン ***
-        var post_button = UIButton(frame: CGRectMake(33, 1150, 300, 50))
-        var button_image = UIImage(named: "btn057_03.png")
+        let post_button = UIButton(frame: CGRectMake(33, 1150, 300, 50))
+        let button_image = UIImage(named: "btn057_03.png")
         //画像のリサイズ
         let size = CGSize(width: 300, height: 60)
         UIGraphicsBeginImageContext(size)
         button_image!.drawInRect(CGRectMake(0,0, size.width, size.height))
-        var resizeImage = UIGraphicsGetImageFromCurrentImageContext()
+        let resizeImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         post_button.setBackgroundImage(resizeImage, forState: .Normal)
         post_button.setTitle("問題を送信！", forState: .Normal)

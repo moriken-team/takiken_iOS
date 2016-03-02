@@ -16,12 +16,12 @@ class accessToApi {
     func index(resource: String, param: String) -> NSMutableDictionary {
         // *** 同期処理 ***
         let requestUrl = NSURL(string: "\(urlBase)/\(resource)/index.json?\(param)")
-        println(requestUrl)
+        print(requestUrl)
         let request:NSURLRequest = NSURLRequest(URL: requestUrl!)
-        let requestData:NSData = NSURLConnection.sendSynchronousRequest(request, returningResponse: nil, error: nil)!
-        var json:NSMutableDictionary = NSJSONSerialization.JSONObjectWithData(requestData, options: NSJSONReadingOptions.AllowFragments, error: nil) as! NSMutableDictionary
+        let requestData:NSData = try! NSURLConnection.sendSynchronousRequest(request, returningResponse: nil)
+        let json:NSMutableDictionary = (try! NSJSONSerialization.JSONObjectWithData(requestData, options: NSJSONReadingOptions.AllowFragments)) as! NSMutableDictionary
         
-        println(json)
+        print(json)
         return json
         
         // ***　非同期処理の場合は以下↓ ***
@@ -42,16 +42,16 @@ class accessToApi {
         // *** 同期処理 ***
         let postParams = params.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
         let requestUrl = NSURL(string: "\(urlBase)/\(resource)/add.json")
-        println(requestUrl)
+        print(requestUrl)
         let request:NSMutableURLRequest = NSMutableURLRequest(URL: requestUrl!)
         // POSTで送信
         request.HTTPMethod = "POST"
         request.HTTPBody = postParams
         
-        let requestData:NSData = NSURLConnection.sendSynchronousRequest(request, returningResponse: nil, error: nil)!
-        var json:NSMutableDictionary = NSJSONSerialization.JSONObjectWithData(requestData, options: NSJSONReadingOptions.AllowFragments, error: nil) as! NSMutableDictionary
+        let requestData:NSData = try! NSURLConnection.sendSynchronousRequest(request, returningResponse: nil)
+        let json:NSMutableDictionary = (try! NSJSONSerialization.JSONObjectWithData(requestData, options: NSJSONReadingOptions.AllowFragments)) as! NSMutableDictionary
         
-        println(json)
+        print(json)
         return json
     }
 }

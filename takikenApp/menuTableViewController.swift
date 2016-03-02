@@ -8,7 +8,8 @@
 
 import UIKit
 
-class menuTableViewController: UITableViewController, UITableViewDelegate,CLLocationManagerDelegate {
+//class menuTableViewController: UITableViewController, UITableViewDelegate,CLLocationManagerDelegate {
+class menuTableViewController: UITableViewController, CLLocationManagerDelegate {
 
     let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     let categoryList = ["ホーム","問題解答","問題作成","たきざわMAP"]
@@ -20,7 +21,7 @@ class menuTableViewController: UITableViewController, UITableViewDelegate,CLLoca
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        println("ロードされた")
+        print("ロードされた")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -45,14 +46,14 @@ class menuTableViewController: UITableViewController, UITableViewDelegate,CLLoca
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        println("ロードされた2")
+        print("ロードされた2")
         return categoryList.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //let cell = tableView.dequeueReusableCellWithIdentifier("CellIdentifier", forIndexPath: indexPath) as UITableViewCell
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! UITableViewCell
-        println("番号 = \(indexPath.row)")
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell")! as UITableViewCell
+        print("番号 = \(indexPath.row)")
         cell.textLabel?.text = categoryList[indexPath.row]
 
         // Configure the cell...
@@ -61,21 +62,21 @@ class menuTableViewController: UITableViewController, UITableViewDelegate,CLLoca
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("番号 = \(indexPath.row)")
+        print("番号 = \(indexPath.row)")
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         if indexPath.row == 0 {
-            println("home kita---")
-            appDelegate.slidingViewController?.topViewController = storyBoard.instantiateViewControllerWithIdentifier("Top") as! UIViewController
+            print("home kita---")
+            appDelegate.slidingViewController?.topViewController = storyBoard.instantiateViewControllerWithIdentifier("Top") 
         } else if indexPath.row == 1 {
-            println("answer kita---")
-            appDelegate.slidingViewController?.topViewController = storyBoard.instantiateViewControllerWithIdentifier("answerTop") as! UIViewController
+            print("answer kita---")
+            appDelegate.slidingViewController?.topViewController = storyBoard.instantiateViewControllerWithIdentifier("answerTop") 
         } else if indexPath.row == 2 {
-            println("create kita---")
-            appDelegate.slidingViewController?.topViewController = storyBoard.instantiateViewControllerWithIdentifier("createTop") as! UIViewController
+            print("create kita---")
+            appDelegate.slidingViewController?.topViewController = storyBoard.instantiateViewControllerWithIdentifier("createTop") 
         } else if indexPath.row == 3 {
-            println("map kita---")
+            print("map kita---")
             //startGpsManager()
-            appDelegate.slidingViewController?.topViewController = storyBoard.instantiateViewControllerWithIdentifier("mapTop") as! UIViewController
+            appDelegate.slidingViewController?.topViewController = storyBoard.instantiateViewControllerWithIdentifier("mapTop") 
         }
         appDelegate.slidingViewController?.resetTopViewAnimated(true)
     }

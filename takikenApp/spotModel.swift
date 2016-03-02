@@ -22,7 +22,7 @@ class spotModel {
         
         // *** レスポンスデータからスポット情報の抽出 ***
         let spotsMax: Int = apiResponse["response"]!["Spots"]!!.count
-        println(spotsMax)
+        print(spotsMax)
         var spots: Array<AnyObject> = []
         for var i = 0; i < spotsMax; i++ {
             spots.append(apiResponse["response"]!["Spots"]!![i]!["Spot"]!! as! Dictionary<String, String>)

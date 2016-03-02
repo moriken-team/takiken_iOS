@@ -46,7 +46,7 @@ class answerSelectionViewController: UIViewController {
         appDelegate.rightAnswer = defaultAnswers[0]
         appDelegate.rightDescription = appDelegate.problems[appDelegate.answerProblemNumber!]["Problem"]!!["description"]! as? String
         
-        println(defaultAnswers)
+        print(defaultAnswers)
         
         // *** ビューに問題情報の表示 ***
         //問題通し番号は初期値が0なので常に+1する

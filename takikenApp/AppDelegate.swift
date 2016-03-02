@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         GMSServices.provideAPIKey("AIzaSyBMtO1fNcnpd8HBam8mpg2wEDAQ_dYinC8")
         slidingViewController = self.window!.rootViewController as? ECSlidingViewController
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        slidingViewController?.topViewController = storyBoard.instantiateViewControllerWithIdentifier("Top") as! UIViewController
+        slidingViewController?.topViewController = storyBoard.instantiateViewControllerWithIdentifier("Top") 
         // Override point for customization after application launch.
         return true
     }

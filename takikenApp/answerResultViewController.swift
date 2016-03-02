@@ -42,7 +42,7 @@ class answerResultViewController: UIViewController {
         }
         rightAnswerLabel.text = appDelegate.rightAnswer
         descriptionLabel.text = appDelegate.rightDescription
-        println(appDelegate.description)
+        print(appDelegate.description)
         
         
         rightAnswerLabel.adjustsFontSizeToFitWidth = true

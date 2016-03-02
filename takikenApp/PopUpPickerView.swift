@@ -1,7 +1,7 @@
 class PopUpPickerView: UIView {
     var pickerView: UIPickerView!
     var pickerToolbar: UIToolbar!
-    var toolbarItems: [UIBarItem]!
+    var toolbarItems: [UIBarButtonItem]!
     
     var delegate: PopUpPickerViewDelegate? {
         didSet {
@@ -22,7 +22,7 @@ class PopUpPickerView: UIView {
         super.init(frame: frame)
         initFunc()
     }
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initFunc()
     }

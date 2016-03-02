@@ -25,7 +25,7 @@ class profileViewController: UIViewController {
         let screenHeight = UIScreen.mainScreen().bounds.size.height;
         //CGRectで取得
         let myImage = UIImage(named: "kokuban.jpg")!
-        var myImageView = UIImageView()
+        let myImageView = UIImageView()
         myImageView.image = myImage
         myImageView.frame = CGRectMake(0, 64, screenWidth, screenHeight - 109)
         //self.view.addSubview(myImageView)
@@ -40,7 +40,7 @@ class profileViewController: UIViewController {
         self.view.layer.shadowColor = UIColor.grayColor().CGColor
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        appDelegate.slidingViewController?.underLeftViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Menu") as! UIViewController
+        appDelegate.slidingViewController?.underLeftViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Menu") 
         self.view.addGestureRecognizer(appDelegate.slidingViewController!.panGesture)
         appDelegate.slidingViewController?.anchorRightPeekAmount = 200.0
     }

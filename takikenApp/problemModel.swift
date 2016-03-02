@@ -36,9 +36,9 @@ class problemModel {
     }
     
     func insertCreateProblem(inputParams: Array<String>) -> NSMutableDictionary {
-        var defaultParams = "kentei_id=1&user_id=1&public_flag=0&"
-        let postParams = defaultParams + join("&", inputParams)
-        var response: NSMutableDictionary = self.add(postParams)
+        let defaultParams = "kentei_id=1&user_id=1&public_flag=0&"
+        let postParams = defaultParams + inputParams.joinWithSeparator("&")
+        let response: NSMutableDictionary = self.add(postParams)
         return response
     }
     

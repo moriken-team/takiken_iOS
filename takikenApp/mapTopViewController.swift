@@ -36,7 +36,7 @@ class mapTopViewController: UIViewController, GMSMapViewDelegate, CLLocationMana
         let gpsStatus = CLLocationManager.authorizationStatus()
         
         if gpsStatus == CLAuthorizationStatus.NotDetermined {
-            println("設定してください")
+            print("設定してください")
             //self.gpsLocationManager.requestAlwaysAuthorization()
             self.gpsLocationManager.requestWhenInUseAuthorization()
         }
@@ -79,8 +79,8 @@ class mapTopViewController: UIViewController, GMSMapViewDelegate, CLLocationMana
     }
     
     //CLLocationManagerオブジェクトにデリゲートオブジェクトを設定すると初回に呼ばれるメソッド。gpsを有効にするため設定ダイアログを表示させるために使う
-    func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        println("Author : \(status)")
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        print("Author : \(status)")
         
         var statusStr: String?
 //        switch (status) {
@@ -101,9 +101,9 @@ class mapTopViewController: UIViewController, GMSMapViewDelegate, CLLocationMana
     }
     
     //位置情報の取得に成功したときに呼ばれるデリゲートメソッド
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        appDelegate.gpsLat = manager.location.coordinate.latitude
-        appDelegate.gpsLon = manager.location.coordinate.longitude
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        appDelegate.gpsLat = manager.location!.coordinate.latitude
+        appDelegate.gpsLon = manager.location!.coordinate.longitude
         
         //googleMap描写の処理
         //if checkGetGps == nil {
@@ -111,14 +111,14 @@ class mapTopViewController: UIViewController, GMSMapViewDelegate, CLLocationMana
             checkGetGps = true
         //}
         
-        println("success")
-        var location_log = String("\(manager.location.coordinate.latitude)") + ":" + String("\(manager.location.coordinate.longitude)")
-        println(location_log)
+        print("success")
+        var location_log = String("\(manager.location!.coordinate.latitude)") + ":" + String("\(manager.location!.coordinate.longitude)")
+        print(location_log)
     }
     
     //位置情報の取得に失敗した時に呼ばれるデリゲートメソッド
-    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
-        println("error")
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print("error")
     }
 
     override func didReceiveMemoryWarning() {
@@ -128,7 +128,7 @@ class mapTopViewController: UIViewController, GMSMapViewDelegate, CLLocationMana
     
     //infoWindowをtapした時に呼ばれるデリゲートメソッド
     func mapView(mapView: GMSMapView!, didTapInfoWindowOfMarker marker: GMSMarker!) {
-        println("\(marker.title)")
+        print("\(marker.title)")
         performSegueWithIdentifier("spotInfo", sender: self)
     }
 
